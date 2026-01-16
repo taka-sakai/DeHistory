@@ -1,74 +1,74 @@
 /**
- * @file ブラウジングデータ削除拡張機能のメインスクリプト
+ * @file このアプリのメインスクリプト
  * @description 各コンポーネントを初期化し、アプリケーションを起動
  */
 
-console.log(`[${chrome.runtime.getManifest().name}] [Main] スクリプト読み込み開始`);
+console.log(`[${chrome.runtime.getManifest().name}] backgroundスクリプト読み込み開始`);
 
 import { Logger } from './logger.js';
 
 import { SettingsManager } from './settingsManager.js';
-Logger.debug('[Main] SettingsManager インポート完了');
+Logger.info('SettingsManager インポート完了');
 
 import { DataCleaner } from './dataCleaner.js';
-Logger.debug('[Main] DataCleaner インポート完了');
+Logger.info('DataCleaner インポート完了');
 
 import { EventHandler } from './eventHandler.js';
-Logger.debug('[Main] EventHandler インポート完了');
+Logger.info('EventHandler インポート完了');
+
+// グローバルインスタンス
+const settingsManager = new SettingsManager();
+const dataCleaner = new DataCleaner(settingsManager);
+const eventHandler = new EventHandler(settingsManager, dataCleaner);
+
+// イベントリスナーを登録
+Logger.info('イベントリスナー登録中...');
+
+// ポップアップからのメッセージを受信するイベント
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    Logger.info('メッセージ受信:', request);
+    return eventHandler.handleMessage(request, sender, sendResponse);
+});
+
+// ブラウザ終了時自動削除のためのウィンドウクローズイベント
+chrome.windows.onRemoved.addListener(async (windowId) => {
+    try {
+        Logger.info('ウィンドウクローズを検知（ID:', windowId, '）');
+        await eventHandler.handleWindowCloseEvent(windowId);
+    } catch (error) {
+        Logger.error('ウィンドウクローズリスナーエラー:', error);
+    }
+});
+
+// ブラウザ起動時自動削除のための起動時イベント
+chrome.runtime.onStartup.addListener(async () => {
+    Logger.info('ブラウザ起動を検知');
+    await loadSettings();
+
+    Logger.info('ブラウザ起動時自動削除を実行中...');
+    await eventHandler.handleStartupIfNeeded();
+    Logger.info('ブラウザ起動時自動削除の完了');
+});
+
+// 拡張機能のインストール/更新時のイベント
+chrome.runtime.onInstalled.addListener(() => {
+    Logger.info('拡張機能のインストール/更新を検知');
+    loadSettings();
+});
+
+Logger.info('イベントリスナー登録完了');
 
 /**
- * アプリケーションの初期化
+ * 設定の読み込み
  */
-async function initializeApp() {
-    Logger.info('='.repeat(50));
-    Logger.info('ブラウジングデータ削除拡張機能を起動中...');
-    Logger.info('='.repeat(50));
-    
+async function loadSettings() {
     try {
-        // コンポーネントの作成
-        Logger.debug('[Main] コンポーネントを作成中...');
-        const settingsManager = new SettingsManager();
-        const dataCleaner = new DataCleaner(settingsManager);
-        const eventHandler = new EventHandler(settingsManager, dataCleaner);
-        Logger.debug('[Main] コンポーネント作成完了');
-        
-        // 初期設定の読み込み
-        Logger.debug('[Main] 設定を読み込み中...');
+        Logger.info('設定読み込み中...');
         await settingsManager.load();
         settingsManager.logSettings();
-        Logger.debug('[Main] 設定読み込み完了');
-        
-        // イベントリスナーの登録
-        Logger.debug('[Main] イベントリスナー登録中...');
-        eventHandler.registerAll();
-        Logger.debug('[Main] イベントリスナー登録完了');
-        
-        Logger.info('='.repeat(50));
-        Logger.info('アプリケーションの初期化が完了しました');
-        Logger.info('='.repeat(50));
-        
-        // 初期化完了後、起動時処理を実行
-        Logger.debug('[Main] 起動時処理を確認中...');
-        await eventHandler.handleStartupIfNeeded();
-        Logger.debug('[Main] 起動時処理の確認完了');
+        Logger.info('設定読み込み完了');
     } catch (error) {
-        Logger.error('='.repeat(50));
-        Logger.error('[Main] アプリケーションの初期化に失敗:', error);
-        Logger.error('[Main] エラースタック:', error.stack);
-        Logger.error('='.repeat(50));
-        
-        // 初期化失敗時の通知（オプション）
-        if (chrome.notifications) {
-            chrome.notifications.create({
-                type: 'basic',
-                iconUrl: 'img/icon48.png',
-                title: '拡張機能エラー',
-                message: 'ブラウジングデータ削除拡張機能の初期化に失敗しました'
-            });
-        }
+        Logger.error('設定の読み込みに失敗:', error);
     }
 }
-
-Logger.debug('[Main] initializeApp を実行します');
-initializeApp();
 

@@ -20,20 +20,7 @@ class EventHandler {
     }
 
     /**
-     * すべてのイベントリスナーを登録
-     */
-    registerAll() {
-        Logger.info('イベントリスナーを登録中...');
-        // chrome.runtime.onStartup は初期化前に発火する可能性があるため、
-        // 初期化完了後に handleStartupIfNeeded() を呼び出す方式に変更
-        // this.registerStartupListener();
-        this.registerMessageListener();
-        this.registerWindowCloseListener();
-        Logger.info('すべてのイベントリスナーを登録しました');
-    }
-
-    /**
-     * 初期化完了後に起動時処理が必要かチェックして実行
+     * 起動時削除が必要かチェックして実行
      * @public
      */
     async handleStartupIfNeeded() {
@@ -62,22 +49,12 @@ class EventHandler {
     }
 
     /**
-     * ポップアップからのメッセージリスナー
-     * @private
-     */
-    registerMessageListener() {
-        chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-            return this.handleMessage(request, sender, sendResponse);
-        });
-    }
-
-    /**
      * メッセージの処理
      * @param {Object} request
      * @param {Object} sender
      * @param {Function} sendResponse
      * @returns {boolean}
-     * @private
+     * @public
      */
     handleMessage(request, sender, sendResponse) {
         try {
@@ -138,24 +115,9 @@ class EventHandler {
     }
 
     /**
-     * ウィンドウクローズ時のイベントリスナー
-     * @private
-     */
-    registerWindowCloseListener() {
-        chrome.windows.onRemoved.addListener(async (windowId) => {
-            try {
-                Logger.debug('ウィンドウが閉じられました（ID:', windowId, '）');
-                await this.handleWindowCloseEvent(windowId);
-            } catch (error) {
-                Logger.error('ウィンドウクローズリスナーエラー:', error);
-            }
-        });
-    }
-
-    /**
      * ウィンドウクローズイベントの処理
      * @param {number} closedWindowId - 閉じられたウィンドウのID
-     * @private
+     * @public
      */
     async handleWindowCloseEvent(closedWindowId) {
         try {
