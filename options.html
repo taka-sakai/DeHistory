@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DeHistory オプション</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <h1>DeHistory オプション</h1>
+    <div class="save-row">
+        <button id="save">保存</button>
+        <div id="status" class="status"></div>
+    </div>
+
+    <div class="form-group">
+        <div><strong>自動実行タイミング</strong></div>
+        <div><input type="checkbox" id="runOnStartup"> <label for="runOnStartup" class="inline">ブラウザ起動時</label></div>
+        <div>
+            <input type="checkbox" id="runOnClose"> 
+            <label for="runOnClose" class="inline">ブラウザ終了時</label>
+            <div class="tooltip">
+                <span class="help-icon warning-icon" id="helpIconClose">⚠</span>
+                <div class="tooltip-content" id="tooltipContentClose">
+                    <span class="close-btn" id="closeTooltipClose">×</span>
+                    ブラウザ終了時は削除が完了しない場合があります。<br>
+                    確実な削除のためにはブラウザ起動時の実行を推奨します。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div><strong>削除対象</strong></div>
+        <div><input type="checkbox" id="removeHistory" checked> <label for="removeHistory" class="inline">閲覧履歴</label></div>
+        <div><input type="checkbox" id="removeCookies" checked> <label for="removeCookies" class="inline">Cookie</label></div>
+        <div><input type="checkbox" id="removeCacheAndStorage" checked> <label for="removeCacheAndStorage" class="inline">キャッシュ</label></div>
+        <div><input type="checkbox" id="removeDownloads" checked> <label for="removeDownloads" class="inline">ダウンロード履歴</label></div>
+        <div><input type="checkbox" id="removeFormData" checked> <label for="removeFormData" class="inline">自動入力フォームのデータ</label></div>
+    </div>
+
+    <div class="whitelist-header">
+        <label>ホワイトリスト</label>
+        <div class="tooltip">
+            <span class="help-icon" id="helpIcon">?</span>
+            <div class="tooltip-content" id="tooltipContent">
+                <span class="close-btn" id="closeTooltip">×</span>
+                削除対象外にするサイトを指定します。<br><br>
+                <strong>フォーマット:</strong> <br>
+                <span class="indented-2"><u>ドメイン, 1or0（Cookie保持or削除）, 1or0（キャッシュ保持or削除）</u><br></span>
+                <span class="indented">または<br></span>
+                <span class="indented-2"><u>ドメイン</u> （省略された項目はすべて「保持」）<br><br></span>
+                <strong>記述例:</strong><br>
+                <span class="indented-2">example.com,1,1 ⇒ Cookieは保持、キャッシュは保持<br></span>
+                <span class="indented-2">example.net ⇒ Cookie、キャッシュ、すべて保持<br></span>
+            </div>
+        </div>
+    </div>
+    <div id="errorList" class="error-list">
+        <span class="close-btn" id="closeErrorList">×</span>
+        <strong>入力エラー:</strong>
+        <ul id="errorItems"></ul>
+    </div>
+    <div class="form-group">
+        <textarea id="whitelist" placeholder="example.com,1,1&#10;example.net"></textarea>
+    </div>
+
+    <script type="module" src="options.js"></script>
+</body>
+
+</html>
