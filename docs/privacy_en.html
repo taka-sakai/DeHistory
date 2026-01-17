@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy — DeHistory</title>
+  <style>
+    body{font-family:Segoe UI, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;line-height:1.6;margin:24px;color:#111}
+    header{margin-bottom:18px}
+    h1{font-size:1.4rem}
+    section{margin-bottom:14px}
+    .meta{color:#555;font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Extension: DeHistory | Last updated: <strong>2026-01-17</strong></p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>DeHistory is a browser extension that provides automatic and manual deletion of browsing history, whitelist, and automation features. This policy explains how data is handled in relation to the extension.</p>
+  </section>
+
+  <section>
+    <h2>Information We Collect</h2>
+    <ul>
+      <li><strong>Browsing Data:</strong> The extension uses the `browsingData` API to remove browsing history and related data. The extension does not collect, store, or transmit the contents of users' browsing history to external servers.</li>
+      <li><strong>Local Settings:</strong> User preferences such as whitelists, auto-run settings, and UI options are stored locally using the `storage` API.</li>
+      <li><strong>Tab and Window Info:</strong> The extension may access basic metadata (tab IDs, window IDs, active state) via the `tabs` and `windows` APIs to determine deletion targets and provide contextual UI. These are used only for deletion logic and UI purposes.</li>
+      <li><strong>Personal Data:</strong> The current implementation does not collect personal identifying information (e.g., name, email) by default, nor does it transmit browsing content externally.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Permissions and How We Use Them</h2>
+    <ul>
+      <li><strong>storage:</strong> To save and read user settings (whitelist, options, state) locally.</li>
+      <li><strong>browsingData:</strong> To delete user-specified ranges of browsing history, cache, and related data.</li>
+      <li><strong>tabs / windows:</strong> To identify targets for deletion, provide contextual UI, and perform explicit user-initiated operations.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Purpose of Use</h2>
+    <p>The primary purpose is to perform deletion operations requested by the user. Secondarily, local data is used to retain user settings and improve usability. The current version does not send usage data or browsing data to external servers. If telemetry or remote error reporting is introduced in the future, it will be disclosed and require user consent.</p>
+  </section>
+
+  <section>
+    <h2>Data Retention</h2>
+    <p>Local settings are retained until the user deletes them or uninstalls the extension. Deletion via the `browsingData` API is executed immediately by the browser; the extension does not retain the content of deleted browsing data.</p>
+  </section>
+
+  <section>
+    <h2>Third-Party Sharing</h2>
+    <p>We do not sell or share users' browsing history or personal information with third parties. Disclosure will only occur when required by law or to protect rights, subject to applicable legal processes.</p>
+  </section>
+
+  <section>
+    <h2>Security</h2>
+    <p>Access to local storage is limited to the minimum necessary. The extension is designed not to transmit browsing data externally. Absolute security cannot be guaranteed—vulnerabilities in the browser or extension environment may pose risks.</p>
+  </section>
+
+  <section>
+    <h2>User Rights and Choices</h2>
+    <p>Users can review and delete extension settings via the extension's options page or by uninstalling the extension. Permissions can be revoked or the extension uninstalled from the browser's extension management UI.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>The extension is not specifically designed for children. Parental supervision is recommended for minors.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We will publish updates to this policy and indicate the effective date. Significant changes will be announced via the extension description or UI when feasible.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Privacy inquiries: <em>taka.7n48pi44@outlook.com</em></p>
+  </section>
+
+  <footer>
+    <p class="meta">Effective date: <strong>2026-01-17</strong></p>
+  </footer>
+</body>
+</html>

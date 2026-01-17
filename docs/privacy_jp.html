@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>プライバシーポリシー — DeHistory</title>
+  <style>
+    body{font-family:Segoe UI, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;line-height:1.6;margin:24px;color:#111}
+    header{margin-bottom:18px}
+    h1{font-size:1.4rem}
+    section{margin-bottom:14px}
+    .meta{color:#555;font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>プライバシーポリシー</h1>
+    <p class="meta">拡張機能名: DeHistory | 最終更新: <strong>2026-01-17</strong></p>
+  </header>
+
+  <section>
+    <h2>概要</h2>
+    <p>DeHistory は、閲覧履歴の自動削除やホワイトリスト機能を提供するブラウザ拡張機能です。本ポリシーは拡張機能のインストールおよび利用におけるデータ取り扱いを説明します。</p>
+  </section>
+
+  <section>
+    <h2>収集する情報</h2>
+    <ul>
+      <li><strong>閲覧データ:</strong> `browsingData` API を利用してブラウザの閲覧履歴等を削除しますが、拡張機能自身が閲覧履歴の内容を外部へ送信または永続的に保存することはありません。</li>
+      <li><strong>ローカル設定:</strong> ホワイトリスト、オート実行設定、UI設定などのユーザー設定をブラウザの `storage` に保存します。</li>
+      <li><strong>タブ・ウィンドウ情報:</strong> 削除対象の判定やUI表示のために `tabs` / `windows` API からタブIDやウィンドウID、アクティブ状態などのメタデータを取得することがあります。これらは削除処理やUI目的でのみ使用します。</li>
+      <li><strong>個人情報:</strong> 実装上、氏名やメールアドレスなどの個人識別情報を自動的に収集・送信する機能は含まれていません。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>権限の利用</h2>
+    <ul>
+      <li><strong>storage:</strong> ユーザー設定（ホワイトリスト、オプション等）の保存と読み書きに使用します。</li>
+      <li><strong>browsingData:</strong> ユーザーが指定した期間や種類の閲覧データを削除するために使用します。</li>
+      <li><strong>tabs / windows:</strong> 削除対象の判定やコンテキストUIの表示、ユーザー操作の対象特定のために使用します。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>データの利用目的</h2>
+    <p>主目的はユーザーが要求した閲覧データの削除機能を正常に提供することです。副次的にユーザー設定を保持して利便性を高めるためにローカルデータを利用します。現行実装では、使用状況や閲覧データを外部へ送信することはありません。将来的にテレメトリ等を導入する場合は事前に明示し、同意を得ます。</p>
+  </section>
+
+  <section>
+    <h2>データ保持期間</h2>
+    <p>ローカルに保存された設定はユーザーが削除するか拡張機能をアンインストールするまで保持します。`browsingData` API による削除はブラウザ側で即時に実行され、拡張機能側で削除された履歴の内容を保持しません。</p>
+  </section>
+
+  <section>
+    <h2>第三者提供・共有</h2>
+    <p>ユーザーの閲覧履歴や個人情報を第三者へ販売・提供することはありません。法令に基づく開示要求等の例外を除き、第三者提供は行いません。</p>
+  </section>
+
+  <section>
+    <h2>セキュリティ</h2>
+    <p>ローカルストレージへのアクセスは最小限に限定しています。拡張機能は閲覧データを外部へ送信しない設計です。完全な安全性は保証できません—ブラウザや拡張機能自体の脆弱性によりリスクが生じる可能性があります。</p>
+  </section>
+
+  <section>
+    <h2>ユーザーの権利と選択</h2>
+    <p>拡張機能の設定はオプション画面またはブラウザの拡張機能管理から確認・削除できます。権限の取り消しやアンインストールはブラウザの管理UIから行ってください。</p>
+  </section>
+
+  <section>
+    <h2>子ども向け</h2>
+    <p>本拡張機能は特に子ども向けの設計ではありません。未成年が利用する場合は保護者の同意を推奨します。</p>
+  </section>
+
+  <section>
+    <h2>ポリシーの変更</h2>
+    <p>本ポリシーを変更する場合は更新版を本ページに掲載し、改定日を明記します。重要な変更がある場合は拡張機能の説明やUIで告知します。</p>
+  </section>
+
+  <section>
+    <h2>連絡先</h2>
+    <p>お問い合わせ: <em>taka.7n48pi44@outlook.com</em></p>
+  </section>
+
+  <footer>
+    <p class="meta">実効日: <strong>2026-01-17</strong></p>
+  </footer>
+</body>
+</html>
