@@ -18,7 +18,7 @@
         <div><strong>自動実行タイミング</strong></div>
         <div><input type="checkbox" id="runOnStartup"> <label for="runOnStartup" class="inline">ブラウザ起動時</label></div>
         <div>
-            <input type="checkbox" id="runOnClose"> 
+            <input type="checkbox" id="runOnClose">
             <label for="runOnClose" class="inline">ブラウザ終了時</label>
             <div class="tooltip">
                 <span class="help-icon warning-icon" id="helpIconClose">⚠</span>
@@ -32,12 +32,17 @@
     </div>
 
     <div class="form-group">
-        <div><strong>削除対象</strong></div>
-        <div><input type="checkbox" id="removeHistory" checked> <label for="removeHistory" class="inline">閲覧履歴</label></div>
-        <div><input type="checkbox" id="removeCookies" checked> <label for="removeCookies" class="inline">Cookie</label></div>
-        <div><input type="checkbox" id="removeCacheAndStorage" checked> <label for="removeCacheAndStorage" class="inline">キャッシュ</label></div>
-        <div><input type="checkbox" id="removeDownloads" checked> <label for="removeDownloads" class="inline">ダウンロード履歴</label></div>
-        <div><input type="checkbox" id="removeFormData" checked> <label for="removeFormData" class="inline">自動入力フォームのデータ</label></div>
+        <div><strong>削除対象（共通設定）</strong></div>
+        <div><input type="checkbox" id="removeHistory" checked> <label for="removeHistory" class="inline">閲覧履歴</label>
+        </div>
+        <div><input type="checkbox" id="removeCookies" checked> <label for="removeCookies" class="inline">Cookie</label>
+        </div>
+        <div><input type="checkbox" id="removeCacheAndStorage" checked> <label for="removeCacheAndStorage"
+                class="inline">キャッシュ</label></div>
+        <div><input type="checkbox" id="removeDownloads" checked> <label for="removeDownloads"
+                class="inline">ダウンロード履歴</label></div>
+        <div><input type="checkbox" id="removeFormData" checked> <label for="removeFormData"
+                class="inline">自動入力フォームのデータ</label></div>
     </div>
 
     <div class="whitelist-header">
@@ -46,14 +51,20 @@
             <span class="help-icon" id="helpIcon">?</span>
             <div class="tooltip-content" id="tooltipContent">
                 <span class="close-btn" id="closeTooltip">×</span>
-                削除対象外にするサイトを指定します。<br><br>
-                <strong>フォーマット:</strong> <br>
-                <span class="indented-2"><u>ドメイン, 1or0（Cookie保持or削除）, 1or0（キャッシュ保持or削除）</u><br></span>
-                <span class="indented">または<br></span>
-                <span class="indented-2"><u>ドメイン</u> （省略された項目はすべて「保持」）<br><br></span>
-                <strong>記述例:</strong><br>
-                <span class="indented-2">example.com,1,1 ⇒ Cookieは保持、キャッシュは保持<br></span>
-                <span class="indented-2">example.net ⇒ Cookie、キャッシュ、すべて保持<br></span>
+                削除対象外にするサイトを指定します。<br>
+                ※Cookieとキャッシュのみ個別設定が可能で、その他の項目には共通設定が適用されます。<br>
+                <br>
+                <strong>設定フォーマット</strong><br>
+                <span class="indented">以下のいずれかで指定してください。</span>
+                <span class="indented-2"><strong>1、個別指定形式</strong>: <code>ドメイン, Cookieフラグ, キャッシュフラグ</code></span>
+                <span class="indented-3">・1:保持する</span>
+                <span class="indented-3">・0:削除する</span>
+                <span class="indented-2"><strong>2、省略形式</strong>: <code>ドメイン</code></span>
+                <span class="indented-3">・Cookie、キャッシュともに「保持」として扱われます。</span>
+                <strong>記述例</strong><br>
+                <span class="indented-2"><code>example.com,1,1</code> ⇒ Cookie保持、キャッシュ保持</span>
+                <span class="indented-2"><code>example.org,1,0</code> ⇒ Cookie保持、キャッシュ削除</span>
+                <span class="indented-2"><code>example.net</code> ⇒ 省略時はすべて保持</span>
             </div>
         </div>
     </div>

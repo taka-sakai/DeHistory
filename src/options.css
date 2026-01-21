@@ -149,6 +149,11 @@ button.danger:hover {
     padding-left: 2em;
 }
 
+.indented-3 {
+    display: block;
+    padding-left: 3em;
+}
+
 .whitelist-header {
     display: flex;
     align-items: center;
@@ -208,7 +213,7 @@ button.danger:hover {
     color: #004085;
     padding: 10px;
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     min-width: 450px;
     max-width: 550px;
