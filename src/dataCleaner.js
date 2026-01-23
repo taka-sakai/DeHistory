@@ -87,36 +87,14 @@ class DataCleaner {
      */
     async removeCookies() {
         if (!this.settings.removeCookies) {
-            Logger.debug('Cookies削除はスキップします（設定で無効）');
+            Logger.debug('Cookieと他のサイトデータ削除はスキップします（設定で無効）');
             return;
         }
 
         const excludeOrigins = this.settings.getOriginsByFlag(WHITELIST_KEYS.KEEP_COOKIES);
-        
-        return this.removeBrowsingData(
-            { since: 0, excludeOrigins },
-            { cookies: true },
-            'Cookies',
-            ['cookies'],
-            excludeOrigins.length
-        );
-    }
-
-    /**
-     * ホワイトリストを考慮してキャッシュとストレージを削除
-     * @returns {Promise<void>}
-     * @private
-     */
-    async removeCacheAndStorage() {
-        if (!this.settings.removeCacheAndStorage) {
-            Logger.debug('キャッシュ/ストレージ削除はスキップします（設定で無効）');
-            return;
-        }
-
-        const excludeOrigins = this.settings.getOriginsByFlag(WHITELIST_KEYS.KEEP_CACHE);
         const dataTypes = {
+            cookies: true,
             cacheStorage: true,
-            cache: true,
             fileSystems: true,
             indexedDB: true,
             localStorage: true,
@@ -127,7 +105,32 @@ class DataCleaner {
         return this.removeBrowsingData(
             { since: 0, excludeOrigins },
             dataTypes,
-            'キャッシュ/ストレージ',
+            'Cookies/サイトデータ',
+            Object.keys(dataTypes),
+            excludeOrigins.length
+        );
+    }
+
+    /**
+     * ホワイトリストを考慮してキャッシュを削除
+     * @returns {Promise<void>}
+     * @private
+     */
+    async removeCacheAndStorage() {
+        if (!this.settings.removeCacheAndStorage) {
+            Logger.debug('キャッシュ削除はスキップします（設定で無効）');
+            return;
+        }
+
+        const excludeOrigins = this.settings.getOriginsByFlag(WHITELIST_KEYS.KEEP_CACHE);
+        const dataTypes = {
+            cache: true
+        };
+
+        return this.removeBrowsingData(
+            { since: 0, excludeOrigins },
+            dataTypes,
+            'キャッシュ',
             Object.keys(dataTypes),
             excludeOrigins.length
         );
