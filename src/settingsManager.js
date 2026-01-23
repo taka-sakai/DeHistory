@@ -37,9 +37,26 @@ class SettingsManager {
     async load() {
         try {
             const keys = Object.values(STORAGE_KEYS);
-            const result = await chrome.storage.local.get(keys);
 
-            this.applyLoadedSettings(result);
+            // chrome.storage.local.get を確実に Promise 化（callback 版に対応）
+            const result = await new Promise((resolve, reject) => {
+                try {
+                    chrome.storage.local.get(keys, (res) => {
+                        if (chrome.runtime.lastError) {
+                            return reject(chrome.runtime.lastError);
+                        }
+                        // res が undefined になる可能性を考慮して nullish を許容
+                        resolve(res ?? {});
+                    });
+                } catch (e) {
+                    reject(e);
+                }
+            });
+
+            const safeResult = result || {};
+            Logger.info('SettingsManager: storage読み込み結果', safeResult);
+
+            this.applyLoadedSettings(safeResult);
             this.logLoadedSettings();
         } catch (error) {
             Logger.error('設定の読み込みエラー:', error);

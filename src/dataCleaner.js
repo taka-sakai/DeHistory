@@ -144,6 +144,7 @@ class DataCleaner {
      * @private
      */
     removeBrowsingData(options, dataTypes, categoryName, typesList, excludeCount = 0) {
+        Logger.debug("chrome.browsingData.removeの引数", {options, dataTypes, categoryName, typesList, excludeCount});        
         return new Promise((resolve, reject) => {
             chrome.browsingData.remove(options, dataTypes, () => {
                 if (chrome.runtime.lastError) {

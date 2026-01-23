@@ -25,6 +25,9 @@ class EventHandler {
      */
     async handleStartupIfNeeded() {
         try {
+            // 起動時は service worker のタイミングにより設定が未ロードの場合があるため先に読み込む
+            await this.settings.load();
+
             // セッションストレージから起動時削除の実行状態を確認
             const result = await chrome.storage.session.get('startupCleanExecuted');
             
@@ -96,21 +99,17 @@ class EventHandler {
      * @param {Function} sendResponse
      * @private
      */
-    handleDeleteDataRequest(sendResponse) {
+    async handleDeleteDataRequest(sendResponse) {
         try {
-            // 非同期処理を実行
-            this.cleaner.clearAll()
-                .then(() => {
-                    sendResponse({ success: true });
-                    Logger.info('データ削除リクエストの処理が完了しました');
-                })
-                .catch((error) => {
-                    Logger.error('データ削除リクエストの処理でエラー:', error);
-                    sendResponse({ success: false, error: error.message });
-                });
+            // 設定を最新にしてから削除処理を実行（service worker 起動直後などで未ロードの可能性があるため）
+            await this.settings.load();
+
+            await this.cleaner.clearAll();
+            sendResponse({ success: true });
+            Logger.info('データ削除リクエストの処理が完了しました');
         } catch (error) {
-            Logger.error('データ削除リクエスト処理エラー:', error);
-            sendResponse({ success: false, error: error.message });
+            Logger.error('データ削除リクエストの処理でエラー:', error);
+            try { sendResponse({ success: false, error: error.message }); } catch (e) { /* noop */ }
         }
     }
 
