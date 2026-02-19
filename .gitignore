@@ -6,5 +6,7 @@
 !LICENSE
 !docs/
 !docs/**
+!screenshots/
+!screenshots/**
 !src/
 !src/**
