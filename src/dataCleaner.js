@@ -40,6 +40,20 @@ class DataCleaner {
     }
 
     /**
+     * 履歴のみを削除（Shortcuts再クリア用）
+     * @returns {Promise<void>}
+     */
+    async removeHistoryOnly() {
+        Logger.info('=== 履歴のみ再削除開始 ===');
+        return this.removeBrowsingData(
+            {},
+            { history: true },
+            '履歴（再削除）',
+            ['history']
+        );
+    }
+
+    /**
      * ホワイトリストを考慮せずブラウジングデータを一括削除
      * @returns {Promise<void>}
      * @private

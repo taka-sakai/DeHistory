@@ -37,8 +37,18 @@ class EventHandler {
             }
 
             if (this.settings.runOnStartup) {
-                Logger.info('起動時データ削除を実行します');
+                // 第1段階: 即座に全データを削除（履歴DBなどはこの時点で消える）
+                Logger.info('起動時データ削除（第1段階）を実行します');
                 await this.cleaner.clearAll();
+                Logger.info('起動時削除（第1段階）完了');
+
+                // 第2段階: OmniboxのShortcutsBackendは起動直後だと未初期化のため
+                // 第1段階の履歴削除通知を受け取れない。遅延後に履歴のみ再削除し
+                // Shortcutsも確実にクリアする。
+                Logger.info('起動時データ削除（第2段階）待機中...');
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                await this.cleaner.removeHistoryOnly();
+                Logger.info('起動時削除（第2段階）完了 - Shortcuts削除済み');
                 
                 // 実行済みフラグをセッションストレージに保存
                 await chrome.storage.session.set({ startupCleanExecuted: true });
