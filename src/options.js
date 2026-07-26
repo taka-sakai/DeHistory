@@ -16,6 +16,27 @@ import {
     parseWhitelistLine
 } from './utils.js';
 
+import { applyI18n } from './i18n.js';
+
+applyI18n();
+
+/**
+ * エラーリストを表示
+ * @param {string[]} messages - 表示するエラーメッセージ
+ * @returns {void}
+ * @description メッセージにはユーザーが入力した行がそのまま含まれるため、
+ * マークアップとして解釈されないようテキストノードとして描画する
+ */
+function showErrorList(messages) {
+    const errorItems = document.getElementById('errorItems');
+    errorItems.replaceChildren(...messages.map(message => {
+        const li = document.createElement('li');
+        li.textContent = message;
+        return li;
+    }));
+    document.getElementById('errorList').style.display = 'block';
+}
+
 /**
  * ページ読み込み時にストレージからホワイトリストと設定を読み込んで表示
  */
@@ -36,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (chrome.runtime.lastError) {
                     Logger.error('設定読み込みエラー:', chrome.runtime.lastError);
-                    displayStatusMessage(document.getElementById('status'), '✕ 設定の読み込みに失敗しました');
+                    displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_loadFailed'));
                     return;
                 }
 
@@ -60,12 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('removeCacheAndStorage').checked = result[STORAGE_KEYS.REMOVE_CACHE_AND_STORAGE] ?? DEFAULT_SETTINGS.REMOVE_CACHE_AND_STORAGE;
             } catch (error) {
                 Logger.error('設定読み込み処理エラー:', error);
-                displayStatusMessage(document.getElementById('status'), '✕ 予期しないエラーが発生しました');
+                displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_unexpectedError'));
             }
         });
     } catch (error) {
         Logger.error('DOMContentLoadedエラー:', error);
-        displayStatusMessage(document.getElementById('status'), '✕ 初期化に失敗しました');
+        displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_initFailed'));
     }
 });
 
@@ -101,12 +122,9 @@ document.getElementById('save').addEventListener('click', () => {
     // バリデーションエラーがあれば警告表示して保存を中止
     if (invalidLines.length > 0) {
         Logger.warn('ホワイトリストのバリデーションエラー:', invalidLines);
-        const errorList = document.getElementById('errorList');
-        const errorItems = document.getElementById('errorItems');
-        errorItems.innerHTML = invalidLines.map(error => `<li>${error}</li>`).join('');
-        errorList.style.display = 'block';
+        showErrorList(invalidLines);
 
-        displayStatusMessage(document.getElementById('status'), `⚠ ${invalidLines.length}件のエラーがあります`);
+        displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_validationErrorCount', [String(invalidLines.length)]));
         saveButton.disabled = false;
         return;
     }
@@ -117,7 +135,11 @@ document.getElementById('save').addEventListener('click', () => {
     whitelist.forEach((entry, index) => {
         const domain = entry[WHITELIST_KEYS.DOMAIN];
         if (domainMap.has(domain)) {
-            duplicates.push(`行${index + 1}: ドメイン "${domain}" が重複しています（最初の出現: 行${domainMap.get(domain) + 1}）`);
+            duplicates.push(chrome.i18n.getMessage('options_duplicateLine', [
+                String(index + 1),
+                domain,
+                String(domainMap.get(domain) + 1)
+            ]));
         } else {
             domainMap.set(domain, index);
         }
@@ -125,12 +147,9 @@ document.getElementById('save').addEventListener('click', () => {
 
     if (duplicates.length > 0) {
         Logger.warn('ドメインの重複エラー:', duplicates);
-        const errorList = document.getElementById('errorList');
-        const errorItems = document.getElementById('errorItems');
-        errorItems.innerHTML = duplicates.map(error => `<li>${error}</li>`).join('');
-        errorList.style.display = 'block';
+        showErrorList(duplicates);
 
-        displayStatusMessage(document.getElementById('status'), `⚠ ドメインの重複があります`);
+        displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_domainDuplicate'));
         saveButton.disabled = false;
         return;
     }
@@ -156,13 +175,13 @@ document.getElementById('save').addEventListener('click', () => {
             try {
                 if (chrome.runtime.lastError) {
                     Logger.error('設定保存エラー:', chrome.runtime.lastError);
-                    displayStatusMessage(document.getElementById('status'), '✕ 設定の保存に失敗しました');
+                    displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_saveFailed'));
                     saveButton.disabled = false;
                     return;
                 }
 
                 const status = document.getElementById('status');
-                status.textContent = `✓ 設定を保存しました`;
+                status.textContent = chrome.i18n.getMessage('options_saveSuccess');
                 status.className = 'status success';
                 status.style.display = '';  // インラインスタイルをクリア
                 status.style.backgroundColor = '';
@@ -173,13 +192,13 @@ document.getElementById('save').addEventListener('click', () => {
                 }, 3000);
             } catch (error) {
                 Logger.error('設定保存後処理エラー:', error);
-                displayStatusMessage(document.getElementById('status'), '✕ 予期しないエラーが発生しました');
+                displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_unexpectedError'));
                 saveButton.disabled = false;
             }
         });
     } catch (error) {
         Logger.error('保存処理エラー:', error);
-        displayStatusMessage(document.getElementById('status'), '✕ 予期しないエラーが発生しました');
+        displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_unexpectedError'));
         const saveButton = document.getElementById('save');
         if (saveButton) saveButton.disabled = false;
     }

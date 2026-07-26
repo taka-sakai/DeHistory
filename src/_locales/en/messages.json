@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Automatically Clear Browsing History"
+  },
+  "extDescription": {
+    "message": "Deletes browsing history and other data automatically, using scheduled runs and a whitelist feature."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Open settings"
+  },
+  "popup_executeBtn": {
+    "message": "Delete Now"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Add to Whitelist"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Remove from Whitelist"
+  },
+  "popup_currentSite": {
+    "message": "Current site: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Current site: $DOMAIN$<br>Registered in whitelist",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Unable to retrieve tab information"
+  },
+  "popup_cannotAddSite": {
+    "message": "This site cannot be added"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Unable to retrieve current site"
+  },
+  "popup_errorOccurred": {
+    "message": "An error occurred"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Error: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Failed to delete data"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Data deleted successfully"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ An unexpected error occurred"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Failed to load settings"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Failed to save"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ removed from whitelist",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ added to whitelist",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory Options"
+  },
+  "options_saveBtn": {
+    "message": "Save"
+  },
+  "options_autoRunTiming": {
+    "message": "Automatic Run Timing"
+  },
+  "options_runOnStartup": {
+    "message": "On browser startup"
+  },
+  "options_runOnClose": {
+    "message": "On browser close"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Deletion may not complete when the browser closes."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "For reliable deletion, running on browser startup is recommended."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Items to Delete (Common Settings)"
+  },
+  "options_removeHistory": {
+    "message": "Browsing history"
+  },
+  "options_removeCookies": {
+    "message": "Cookies (cookies and other site data)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Cache (cached images and files)"
+  },
+  "options_removeDownloads": {
+    "message": "Download history"
+  },
+  "options_removeFormData": {
+    "message": "Autofill form data"
+  },
+  "options_whitelistLabel": {
+    "message": "Whitelist"
+  },
+  "options_whitelistDesc": {
+    "message": "Specify sites to exclude from deletion."
+  },
+  "options_whitelistNote": {
+    "message": "* Only cookies and cache can be set individually; other items always follow the common settings."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Format"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Specify using one of the following formats."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Detailed format"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "domain, cookieFlag, cacheFlag"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: keep"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: delete"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Short format"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "domain"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Both cookies and cache are treated as \"keep\"."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Examples"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Keep cookies, keep cache"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Keep cookies, delete cache"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Everything kept when omitted"
+  },
+  "options_errorListTitle": {
+    "message": "Input errors:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Failed to load settings"
+  },
+  "options_unexpectedError": {
+    "message": "✕ An unexpected error occurred"
+  },
+  "options_initFailed": {
+    "message": "✕ Failed to initialize"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ $COUNT$ error(s) found",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Duplicate domains found"
+  },
+  "options_duplicateLine": {
+    "message": "Line $LINE$: domain \"$DOMAIN$\" is duplicated (first seen on line $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Failed to save settings"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Settings saved"
+  },
+
+  "error_domainEmpty": {
+    "message": "Domain is empty"
+  },
+  "error_domainTooLong": {
+    "message": "Domain name is too long (max 253 characters)"
+  },
+  "error_invalidChars": {
+    "message": "Contains invalid characters"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Wildcards (*) are not allowed"
+  },
+  "error_asciiOnly": {
+    "message": "Only ASCII characters are allowed"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Invalid domain name format"
+  },
+  "error_consecutiveDots": {
+    "message": "Consecutive dots are not allowed"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Domain cannot start or end with a dot"
+  },
+  "error_labelTooLong": {
+    "message": "Domain label is too long (max 63 characters)"
+  },
+  "error_lineValidation": {
+    "message": "Line $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Line $LINE$: flag must be 0 or 1 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Line $LINE$: invalid format ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Line $LINE$: parse error ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

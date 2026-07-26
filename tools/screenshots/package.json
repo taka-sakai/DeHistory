@@ -1,0 +1,11 @@
+{
+  "name": "dehistory-screenshot-tool",
+  "private": true,
+  "description": "ストア掲載用スクリーンショットの撮影ツール（拡張機能本体には含まれない）",
+  "scripts": {
+    "shots": "node take-screenshots.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}

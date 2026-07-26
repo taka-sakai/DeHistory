@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - 閲覧履歴を自動で削除"
+  },
+  "extDescription": {
+    "message": "自動実行やホワイトリスト機能を使って閲覧履歴などを削除します。"
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "設定を開く"
+  },
+  "popup_executeBtn": {
+    "message": "今すぐ削除する"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "ホワイトリストに追加する"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "ホワイトリストから除外する"
+  },
+  "popup_currentSite": {
+    "message": "現在のサイト: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "現在のサイト: $DOMAIN$<br>ホワイトリストに登録されています",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "タブ情報を取得できません"
+  },
+  "popup_cannotAddSite": {
+    "message": "このサイトは追加できません"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "現在のサイトを取得できません"
+  },
+  "popup_errorOccurred": {
+    "message": "エラーが発生しました"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ エラー: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ データ削除に失敗しました"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ データ削除を実行しました"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ 予期しないエラーが発生しました"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ 設定の読み込みに失敗しました"
+  },
+  "popup_saveFailed": {
+    "message": "✕ 保存に失敗しました"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ をホワイトリストから除外しました",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ をホワイトリストに追加しました",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory オプション"
+  },
+  "options_saveBtn": {
+    "message": "保存"
+  },
+  "options_autoRunTiming": {
+    "message": "自動実行タイミング"
+  },
+  "options_runOnStartup": {
+    "message": "ブラウザ起動時"
+  },
+  "options_runOnClose": {
+    "message": "ブラウザ終了時"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "ブラウザ終了時は削除が完了しない場合があります。"
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "確実な削除のためにはブラウザ起動時の実行を推奨します。"
+  },
+  "options_deleteTargetsCommon": {
+    "message": "削除対象（共通設定）"
+  },
+  "options_removeHistory": {
+    "message": "閲覧履歴"
+  },
+  "options_removeCookies": {
+    "message": "Cookie（Cookieと他のサイトデータ）"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "キャッシュ（キャッシュされた画像とファイル）"
+  },
+  "options_removeDownloads": {
+    "message": "ダウンロード履歴"
+  },
+  "options_removeFormData": {
+    "message": "自動入力フォームのデータ"
+  },
+  "options_whitelistLabel": {
+    "message": "ホワイトリスト"
+  },
+  "options_whitelistDesc": {
+    "message": "削除対象外にするサイトを指定します。"
+  },
+  "options_whitelistNote": {
+    "message": "※Cookieとキャッシュのみ個別設定が可能で、その他の項目には共通設定が適用されます。"
+  },
+  "options_whitelistFormatTitle": {
+    "message": "設定フォーマット"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "以下のいずれかで指定してください。"
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1、個別指定形式"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "ドメイン, Cookieフラグ, キャッシュフラグ"
+  },
+  "options_whitelistFlag1": {
+    "message": "・1:保持する"
+  },
+  "options_whitelistFlag0": {
+    "message": "・0:削除する"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2、省略形式"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "ドメイン"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "・Cookie、キャッシュともに「保持」として扱われます。"
+  },
+  "options_whitelistExampleTitle": {
+    "message": "記述例"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Cookie保持、キャッシュ保持"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Cookie保持、キャッシュ削除"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ 省略時はすべて保持"
+  },
+  "options_errorListTitle": {
+    "message": "入力エラー:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ 設定の読み込みに失敗しました"
+  },
+  "options_unexpectedError": {
+    "message": "✕ 予期しないエラーが発生しました"
+  },
+  "options_initFailed": {
+    "message": "✕ 初期化に失敗しました"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ $COUNT$件のエラーがあります",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ ドメインの重複があります"
+  },
+  "options_duplicateLine": {
+    "message": "行$LINE$: ドメイン \"$DOMAIN$\" が重複しています（最初の出現: 行$FIRST$）",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ 設定の保存に失敗しました"
+  },
+  "options_saveSuccess": {
+    "message": "✓ 設定を保存しました"
+  },
+
+  "error_domainEmpty": {
+    "message": "ドメインが空です"
+  },
+  "error_domainTooLong": {
+    "message": "ドメイン名が長すぎます（253文字以内）"
+  },
+  "error_invalidChars": {
+    "message": "不正な文字が含まれています"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "ワイルドカード(*)は使用できません"
+  },
+  "error_asciiOnly": {
+    "message": "ASCII文字のみ使用できます"
+  },
+  "error_invalidDomainFormat": {
+    "message": "ドメイン名の形式が不正です"
+  },
+  "error_consecutiveDots": {
+    "message": "連続するドットは使用できません"
+  },
+  "error_leadingTrailingDot": {
+    "message": "ドメインの先頭または末尾にドットは使用できません"
+  },
+  "error_labelTooLong": {
+    "message": "ドメインラベルが長すぎます（63文字以内）"
+  },
+  "error_lineValidation": {
+    "message": "行$LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "行$LINE$: フラグは 0 または 1 で指定してください ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "行$LINE$: フォーマットが不正です ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "行$LINE$: パースエラー ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

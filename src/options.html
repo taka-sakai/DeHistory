@@ -3,78 +3,78 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>DeHistory オプション</title>
+    <title data-i18n="options_pageTitle"></title>
     <link rel="stylesheet" href="options.css">
 </head>
 
 <body>
-    <h1>DeHistory オプション</h1>
+    <h1 data-i18n="options_pageTitle"></h1>
     <div class="save-row">
-        <button id="save">保存</button>
+        <button id="save" data-i18n="options_saveBtn"></button>
         <div id="status" class="status"></div>
     </div>
 
     <div class="form-group">
-        <div><strong>自動実行タイミング</strong></div>
-        <div><input type="checkbox" id="runOnStartup"> <label for="runOnStartup" class="inline">ブラウザ起動時</label></div>
+        <div><strong data-i18n="options_autoRunTiming"></strong></div>
+        <div><input type="checkbox" id="runOnStartup"> <label for="runOnStartup" class="inline" data-i18n="options_runOnStartup"></label></div>
         <div>
             <input type="checkbox" id="runOnClose">
-            <label for="runOnClose" class="inline">ブラウザ終了時</label>
+            <label for="runOnClose" class="inline" data-i18n="options_runOnClose"></label>
             <div class="tooltip">
                 <span class="help-icon warning-icon" id="helpIconClose">⚠</span>
                 <div class="tooltip-content" id="tooltipContentClose">
                     <span class="close-btn" id="closeTooltipClose">×</span>
-                    ブラウザ終了時は削除が完了しない場合があります。<br>
-                    確実な削除のためにはブラウザ起動時の実行を推奨します。
+                    <span data-i18n="options_runOnCloseTooltipLine1"></span><br>
+                    <span data-i18n="options_runOnCloseTooltipLine2"></span>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="form-group">
-        <div><strong>削除対象（共通設定）</strong></div>
-        <div><input type="checkbox" id="removeHistory" checked> <label for="removeHistory" class="inline">閲覧履歴</label>
+        <div><strong data-i18n="options_deleteTargetsCommon"></strong></div>
+        <div><input type="checkbox" id="removeHistory" checked> <label for="removeHistory" class="inline" data-i18n="options_removeHistory"></label>
         </div>
-        <div><input type="checkbox" id="removeCookies" checked> <label for="removeCookies" class="inline">Cookie（Cookieと他のサイトデータ）</label>
+        <div><input type="checkbox" id="removeCookies" checked> <label for="removeCookies" class="inline" data-i18n="options_removeCookies"></label>
         </div>
         <div><input type="checkbox" id="removeCacheAndStorage" checked> <label for="removeCacheAndStorage"
-                class="inline">キャッシュ（キャッシュされた画像とファイル）</label></div>
+                class="inline" data-i18n="options_removeCacheAndStorage"></label></div>
         <div><input type="checkbox" id="removeDownloads" checked> <label for="removeDownloads"
-                class="inline">ダウンロード履歴</label></div>
+                class="inline" data-i18n="options_removeDownloads"></label></div>
         <div><input type="checkbox" id="removeFormData" checked> <label for="removeFormData"
-                class="inline">自動入力フォームのデータ</label></div>
+                class="inline" data-i18n="options_removeFormData"></label></div>
     </div>
 
     <div class="whitelist-header">
-        <label>ホワイトリスト</label>
+        <label data-i18n="options_whitelistLabel"></label>
         <div class="tooltip">
             <span class="help-icon" id="helpIcon">?</span>
             <div class="tooltip-content" id="tooltipContent">
                 <span class="close-btn" id="closeTooltip">×</span>
-                削除対象外にするサイトを指定します。<br>
-                ※Cookieとキャッシュのみ個別設定が可能で、その他の項目には共通設定が適用されます。<br>
+                <span data-i18n="options_whitelistDesc"></span><br>
+                <span data-i18n="options_whitelistNote"></span><br>
                 <br>
-                <strong>設定フォーマット</strong><br>
-                <span class="indented">以下のいずれかで指定してください。</span>
-                <span class="indented-2"><strong>1、個別指定形式</strong>: <code>ドメイン, Cookieフラグ, キャッシュフラグ</code></span>
-                <span class="indented-3">・1:保持する</span>
-                <span class="indented-3">・0:削除する</span>
-                <span class="indented-2"><strong>2、省略形式</strong>: <code>ドメイン</code></span>
-                <span class="indented-3">・Cookie、キャッシュともに「保持」として扱われます。</span>
-                <strong>記述例</strong><br>
-                <span class="indented-2"><code>example.com,1,1</code> ⇒ Cookie保持、キャッシュ保持</span>
-                <span class="indented-2"><code>example.org,1,0</code> ⇒ Cookie保持、キャッシュ削除</span>
-                <span class="indented-2"><code>example.net</code> ⇒ 省略時はすべて保持</span>
+                <strong data-i18n="options_whitelistFormatTitle"></strong><br>
+                <span class="indented" data-i18n="options_whitelistFormatIntro"></span>
+                <span class="indented-2"><strong data-i18n="options_whitelistFormat1Title"></strong>: <code data-i18n="options_whitelistFormat1Code"></code></span>
+                <span class="indented-3" data-i18n="options_whitelistFlag1"></span>
+                <span class="indented-3" data-i18n="options_whitelistFlag0"></span>
+                <span class="indented-2"><strong data-i18n="options_whitelistFormat2Title"></strong>: <code data-i18n="options_whitelistFormat2Code"></code></span>
+                <span class="indented-3" data-i18n="options_whitelistFormat2Note"></span>
+                <strong data-i18n="options_whitelistExampleTitle"></strong><br>
+                <span class="indented-2"><code>example.com,1,1</code> <span data-i18n="options_whitelistExample1"></span></span>
+                <span class="indented-2"><code>example.org,1,0</code> <span data-i18n="options_whitelistExample2"></span></span>
+                <span class="indented-2"><code>example.net</code> <span data-i18n="options_whitelistExample3"></span></span>
             </div>
         </div>
     </div>
     <div id="errorList" class="error-list">
         <span class="close-btn" id="closeErrorList">×</span>
-        <strong>入力エラー:</strong>
+        <strong data-i18n="options_errorListTitle"></strong>
         <ul id="errorItems"></ul>
     </div>
     <div class="form-group">
-        <textarea id="whitelist" placeholder="example.com,1,1&#10;example.net"></textarea>
+        <textarea id="whitelist" data-i18n-placeholder="options_whitelistPlaceholder"></textarea>
     </div>
 
     <script type="module" src="options.js"></script>

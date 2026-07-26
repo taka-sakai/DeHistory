@@ -71,49 +71,49 @@ function clearStatusMessage(statusElement) {
 function validateDomainName(domain) {
     // 空チェック
     if (!domain || domain.length === 0) {
-        return { valid: false, error: 'ドメインが空です' };
+        return { valid: false, error: chrome.i18n.getMessage('error_domainEmpty') };
     }
 
     // 長さチェック（253文字制限）
     if (domain.length > 253) {
-        return { valid: false, error: 'ドメイン名が長すぎます（253文字以内）' };
+        return { valid: false, error: chrome.i18n.getMessage('error_domainTooLong') };
     }
 
     // 危険な文字のチェック（制御文字、特殊スペースなど）
     if (DANGEROUS_CHARS_REGEX.test(domain)) {
-        return { valid: false, error: '不正な文字が含まれています' };
+        return { valid: false, error: chrome.i18n.getMessage('error_invalidChars') };
     }
 
     // ワイルドカードチェック
     if (domain.includes('*')) {
-        return { valid: false, error: 'ワイルドカード(*)は使用できません' };
+        return { valid: false, error: chrome.i18n.getMessage('error_wildcardNotAllowed') };
     }
 
     // Unicode文字のチェック（ASCII以外の文字を拒否）
     if (!/^[\x00-\x7F]*$/.test(domain)) {
-        return { valid: false, error: 'ASCII文字のみ使用できます' };
+        return { valid: false, error: chrome.i18n.getMessage('error_asciiOnly') };
     }
 
     // 正規表現チェック
     if (!DOMAIN_REGEX.test(domain)) {
-        return { valid: false, error: 'ドメイン名の形式が不正です' };
+        return { valid: false, error: chrome.i18n.getMessage('error_invalidDomainFormat') };
     }
 
     // 連続するドットのチェック
     if (domain.includes('..')) {
-        return { valid: false, error: '連続するドットは使用できません' };
+        return { valid: false, error: chrome.i18n.getMessage('error_consecutiveDots') };
     }
 
     // 先頭・末尾のドットチェック
     if (domain.startsWith('.') || domain.endsWith('.')) {
-        return { valid: false, error: 'ドメインの先頭または末尾にドットは使用できません' };
+        return { valid: false, error: chrome.i18n.getMessage('error_leadingTrailingDot') };
     }
 
     // 各ラベルの長さチェック（63文字制限）
     const parts = domain.split('.');
     for (const label of parts) {
         if (label.length > 63) {
-            return { valid: false, error: 'ドメインラベルが長すぎます（63文字以内）' };
+            return { valid: false, error: chrome.i18n.getMessage('error_labelTooLong') };
         }
     }
 
@@ -154,7 +154,7 @@ function parseWhitelistLine(line, lineIndex) {
             return {
                 success: false,
                 entry: null,
-                error: `行${lineNumber}: ${validation.error} (${line})`
+                error: chrome.i18n.getMessage('error_lineValidation', [String(lineNumber), validation.error, line])
             };
         }
 
@@ -181,7 +181,7 @@ function parseWhitelistLine(line, lineIndex) {
                 return {
                     success: false,
                     entry: null,
-                    error: `行${lineNumber}: フラグは 0 または 1 で指定してください (${line})`
+                    error: chrome.i18n.getMessage('error_lineFlagFormat', [String(lineNumber), line])
                 };
             }
 
@@ -200,13 +200,13 @@ function parseWhitelistLine(line, lineIndex) {
         return {
             success: false,
             entry: null,
-            error: `行${lineNumber}: フォーマットが不正です (${line})`
+            error: chrome.i18n.getMessage('error_lineInvalidFormat', [String(lineNumber), line])
         };
     } catch (error) {
         return {
             success: false,
             entry: null,
-            error: `行${lineIndex + 1}: パースエラー (${error.message})`
+            error: chrome.i18n.getMessage('error_lineParseError', [String(lineIndex + 1), error.message])
         };
     }
 }

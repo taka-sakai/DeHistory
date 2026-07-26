@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "DeHistory - 閲覧履歴を自動で削除",
-  "version": "1.0.5",
-  "description": "自動実行やホワイトリスト機能を使って閲覧履歴などを削除します。",
+  "name": "__MSG_extName__",
+  "version": "1.1.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
   "icons": {
     "16": "img/delete-sweep16.png",
     "32": "img/delete-sweep32.png",

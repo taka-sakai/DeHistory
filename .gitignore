@@ -10,3 +10,9 @@
 !screenshots/**
 !src/
 !src/**
+!tools/
+!tools/**
+
+# ツールが取得するもの（コミットしない）
+tools/**/node_modules/
+tools/**/chrome/
