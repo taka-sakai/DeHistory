@@ -3,7 +3,7 @@
     "message": "DeHistory - автоматическая очистка истории браузера"
   },
   "extDescription": {
-    "message": "Автоматически удаляет историю просмотров и другие данные с помощью запуска по расписанию и белого списка."
+    "message": "Автоматически удаляет историю просмотров и другие данные с помощью запуска по расписанию и списка разрешённых сайтов."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Удалить сейчас"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Добавить в белый список"
+  "popup_addToAllowlistBtn": {
+    "message": "Добавить в список разрешённых"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Убрать из белого списка"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Убрать из списка разрешённых"
   },
   "popup_currentSite": {
     "message": "Текущий сайт: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Текущий сайт: $DOMAIN$<br>Добавлен в белый список",
+    "message": "Текущий сайт: $DOMAIN$<br>Добавлен в список разрешённых",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Произошла непредвиденная ошибка"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Не удалось загрузить настройки"
   },
   "popup_saveFailed": {
     "message": "✕ Не удалось сохранить"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ убран из белого списка",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ убран из списка разрешённых",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ добавлен в белый список",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ добавлен в список разрешённых",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Данные автозаполнения форм"
   },
-  "options_whitelistLabel": {
-    "message": "Белый список"
+  "options_allowlistLabel": {
+    "message": "Список разрешённых"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Укажите сайты, которые не нужно очищать."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Отдельно можно настроить только файлы cookie и кеш; остальные элементы всегда следуют общим настройкам."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Формат"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Используйте один из следующих форматов."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Подробный формат"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "домен, флаг cookie, флаг кеша"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: сохранить"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: удалить"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Краткий формат"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "домен"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• И файлы cookie, и кеш считаются «сохраняемыми»."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Примеры"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Сохранить cookie, сохранить кеш"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Сохранить cookie, удалить кеш"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Если не указано, сохраняется всё"
   },
   "options_errorListTitle": {
     "message": "Ошибки ввода:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

@@ -3,7 +3,7 @@
     "message": "DeHistory - 自动清除浏览记录"
   },
   "extDescription": {
-    "message": "通过定时执行和白名单功能，自动删除浏览记录等数据。"
+    "message": "通过定时执行和允许列表功能，自动删除浏览记录等数据。"
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "立即删除"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "添加到白名单"
+  "popup_addToAllowlistBtn": {
+    "message": "添加到允许列表"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "从白名单中移除"
+  "popup_removeFromAllowlistBtn": {
+    "message": "从允许列表中移除"
   },
   "popup_currentSite": {
     "message": "当前网站：$DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "当前网站：$DOMAIN$<br>已加入白名单",
+    "message": "当前网站：$DOMAIN$<br>已加入允许列表",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ 发生意外错误"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ 加载设置失败"
   },
   "popup_saveFailed": {
     "message": "✕ 保存失败"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ 已将 $DOMAIN$ 从白名单中移除",
+  "popup_removedFromAllowlist": {
+    "message": "✓ 已将 $DOMAIN$ 从允许列表中移除",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ 已将 $DOMAIN$ 添加到白名单",
+  "popup_addedToAllowlist": {
+    "message": "✓ 已将 $DOMAIN$ 添加到允许列表",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "自动填充的表单数据"
   },
-  "options_whitelistLabel": {
-    "message": "白名单"
+  "options_allowlistLabel": {
+    "message": "允许列表"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "指定不进行删除的网站。"
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "※仅 Cookie 和缓存可以单独设置，其他项目始终遵循通用设置。"
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "格式"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "请使用以下任一格式指定。"
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. 详细格式"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "域名, Cookie标志, 缓存标志"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1：保留"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0：删除"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. 简略格式"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "域名"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Cookie 和缓存均按“保留”处理。"
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "示例"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ 保留 Cookie、保留缓存"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ 保留 Cookie、删除缓存"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ 省略时全部保留"
   },
   "options_errorListTitle": {
     "message": "输入错误："
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

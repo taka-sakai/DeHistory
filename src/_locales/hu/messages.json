@@ -3,7 +3,7 @@
     "message": "DeHistory - Böngészési előzmények automatikus törlése"
   },
   "extDescription": {
-    "message": "Automatikusan törli a böngészési előzményeket és más adatokat ütemezett futtatással és fehérlistával."
+    "message": "Automatikusan törli a böngészési előzményeket és más adatokat ütemezett futtatással és engedélyezési listával."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Törlés most"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Hozzáadás a fehérlistához"
+  "popup_addToAllowlistBtn": {
+    "message": "Hozzáadás az engedélyezési listához"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Eltávolítás a fehérlistáról"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Eltávolítás az engedélyezési listáról"
   },
   "popup_currentSite": {
     "message": "Jelenlegi webhely: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Jelenlegi webhely: $DOMAIN$<br>Szerepel a fehérlistán",
+    "message": "Jelenlegi webhely: $DOMAIN$<br>Szerepel az engedélyezési listán",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Váratlan hiba történt"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ A beállítások betöltése nem sikerült"
   },
   "popup_saveFailed": {
     "message": "✕ A mentés nem sikerült"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ A(z) $DOMAIN$ eltávolítva a fehérlistáról",
+  "popup_removedFromAllowlist": {
+    "message": "✓ A(z) $DOMAIN$ eltávolítva az engedélyezési listáról",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ A(z) $DOMAIN$ hozzáadva a fehérlistához",
+  "popup_addedToAllowlist": {
+    "message": "✓ A(z) $DOMAIN$ hozzáadva az engedélyezési listához",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Űrlapok automatikus kitöltési adatai"
   },
-  "options_whitelistLabel": {
-    "message": "Fehérlista"
+  "options_allowlistLabel": {
+    "message": "Engedélyezési lista"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Adja meg a törlésből kihagyandó webhelyeket."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Csak a sütik és a gyorsítótár állítható be egyenként; a többi elem mindig a közös beállításokat követi."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Formátum"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Használja az alábbi formátumok egyikét."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Részletes formátum"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "domain, sütijelző, gyorsítótár-jelző"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: megtartás"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: törlés"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Rövid formátum"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "domain"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• A sütik és a gyorsítótár egyaránt „megtartandó” értéket kap."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Példák"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Sütik megtartása, gyorsítótár megtartása"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Sütik megtartása, gyorsítótár törlése"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Elhagyás esetén minden megmarad"
   },
   "options_errorListTitle": {
     "message": "Beviteli hibák:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

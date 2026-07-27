@@ -3,7 +3,7 @@
     "message": "DeHistory - Borra el historial de navegación automáticamente"
   },
   "extDescription": {
-    "message": "Elimina automáticamente el historial de navegación y otros datos mediante ejecuciones programadas y una lista blanca."
+    "message": "Elimina automáticamente el historial de navegación y otros datos mediante ejecuciones programadas y una lista de permitidos."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Eliminar ahora"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Añadir a la lista blanca"
+  "popup_addToAllowlistBtn": {
+    "message": "Añadir a la lista de permitidos"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Quitar de la lista blanca"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Quitar de la lista de permitidos"
   },
   "popup_currentSite": {
     "message": "Sitio actual: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Sitio actual: $DOMAIN$<br>Está en la lista blanca",
+    "message": "Sitio actual: $DOMAIN$<br>Está en la lista de permitidos",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Se ha producido un error inesperado"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ No se pudo cargar la configuración"
   },
   "popup_saveFailed": {
     "message": "✕ No se pudo guardar"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ se ha quitado de la lista blanca",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ se ha quitado de la lista de permitidos",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ se ha añadido a la lista blanca",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ se ha añadido a la lista de permitidos",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Datos de autocompletado de formularios"
   },
-  "options_whitelistLabel": {
-    "message": "Lista blanca"
+  "options_allowlistLabel": {
+    "message": "Lista de permitidos"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Especifica los sitios que se excluirán de la eliminación."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Solo las cookies y la caché se pueden configurar individualmente; los demás elementos siguen siempre la configuración común."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Formato"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Indícalo con uno de los siguientes formatos."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Formato detallado"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "dominio, flag de cookies, flag de caché"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: conservar"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: eliminar"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Formato abreviado"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "dominio"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Tanto las cookies como la caché se tratan como «conservar»."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Ejemplos"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Conservar cookies, conservar caché"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Conservar cookies, eliminar caché"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Si se omite, se conserva todo"
   },
   "options_errorListTitle": {
     "message": "Errores de entrada:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

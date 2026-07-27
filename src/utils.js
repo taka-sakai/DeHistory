@@ -1,13 +1,13 @@
 /**
  * @file 共通ユーティリティ関数
- * @description ホワイトリスト、ドメインバリデーション、UIユーティリティなど
+ * @description 許可リスト、ドメインバリデーション、UIユーティリティなど
  */
 
 import { Logger } from './logger.js';
 import {
     DOMAIN_REGEX,
     DANGEROUS_CHARS_REGEX,
-    WHITELIST_KEYS
+    ALLOWLIST_KEYS
 } from './constants.js';
 
 // ========================================
@@ -121,7 +121,7 @@ function validateDomainName(domain) {
 }
 
 // ========================================
-// ホワイトリスト関連のユーティリティ関数
+// 許可リスト関連のユーティリティ関数
 // ========================================
 
 /**
@@ -134,7 +134,7 @@ function isValidFlag(flagValue) {
 }
 
 /**
- * ホワイトリストの1行をパース
+ * 許可リストの1行をパース
  * @param {string} line - パースする行（「ドメイン」または「ドメイン,keepCookies,keepCache」形式）
  * @param {number} lineIndex - 行番号（0始まり）
  * @returns {{success: boolean, entry: string|{domain: string, keepCookies: boolean, keepCache: boolean}|null, error: string|null}} パース結果
@@ -142,7 +142,7 @@ function isValidFlag(flagValue) {
  * - ドメインのみ: "example.com"
  * - フラグ付き: "example.com,1,1"
  */
-function parseWhitelistLine(line, lineIndex) {
+function parseAllowlistLine(line, lineIndex) {
     try {
         const lineNumber = lineIndex + 1;
         const parts = line.split(',').map(p => p.trim());
@@ -163,9 +163,9 @@ function parseWhitelistLine(line, lineIndex) {
             return {
                 success: true,
                 entry: {
-                    [WHITELIST_KEYS.DOMAIN]: domain,
-                    [WHITELIST_KEYS.KEEP_COOKIES]: 1,
-                    [WHITELIST_KEYS.KEEP_CACHE]: 1
+                    [ALLOWLIST_KEYS.DOMAIN]: domain,
+                    [ALLOWLIST_KEYS.KEEP_COOKIES]: 1,
+                    [ALLOWLIST_KEYS.KEEP_CACHE]: 1
                 },
                 error: null
             };
@@ -188,9 +188,9 @@ function parseWhitelistLine(line, lineIndex) {
             return {
                 success: true,
                 entry: {
-                    [WHITELIST_KEYS.DOMAIN]: domain,
-                    [WHITELIST_KEYS.KEEP_COOKIES]: parseInt(keepCookiesStr),
-                    [WHITELIST_KEYS.KEEP_CACHE]: parseInt(keepCacheStr)
+                    [ALLOWLIST_KEYS.DOMAIN]: domain,
+                    [ALLOWLIST_KEYS.KEEP_COOKIES]: parseInt(keepCookiesStr),
+                    [ALLOWLIST_KEYS.KEEP_CACHE]: parseInt(keepCacheStr)
                 },
                 error: null
             };
@@ -219,5 +219,5 @@ export {
     displayStatusMessage,
     clearStatusMessage,
     validateDomainName,
-    parseWhitelistLine
+    parseAllowlistLine
 };

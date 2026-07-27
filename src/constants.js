@@ -7,8 +7,8 @@
  * @const {Object}
  */
 export const DEFAULT_SETTINGS = {
-    WHITELIST_KEEP_COOKIES: 1,
-    WHITELIST_KEEP_CACHE: 1,
+    ALLOWLIST_KEEP_COOKIES: 1,
+    ALLOWLIST_KEEP_CACHE: 1,
     RUN_ON_STARTUP: false,
     RUN_ON_CLOSE: false,
     REMOVE_DOWNLOADS: true,
@@ -23,7 +23,9 @@ export const DEFAULT_SETTINGS = {
  * @const {Object}
  */
 export const STORAGE_KEYS = {
-    WHITELIST: 'whitelist',
+    // 値の 'whitelist' は変更しないこと。既存ユーザーが保存済みのキーであり、
+    // 改名すると設定済みの許可リストが失われて保護対象のCookieが削除される。
+    ALLOWLIST: 'whitelist',
     RUN_ON_STARTUP: 'runOnStartup',
     RUN_ON_CLOSE: 'runOnClose',
     REMOVE_DOWNLOADS: 'removeDownloads',
@@ -34,10 +36,10 @@ export const STORAGE_KEYS = {
 };
 
 /**
- * ホワイトリストのキー名
+ * 許可リストのキー名
  * @const {Object}
  */
-export const WHITELIST_KEYS = {
+export const ALLOWLIST_KEYS = {
     DOMAIN: 'domain',
     KEEP_COOKIES: 'keepCookies',
     KEEP_CACHE: 'keepCache'

@@ -1,13 +1,13 @@
 /**
  * @file ポップアップUIのスクリプト
- * @description ブラウジングデータ削除の実行とホワイトリスト管理のUIロジック
+ * @description ブラウジングデータ削除の実行と許可リスト管理のUIロジック
  */
 
 import { Logger } from './logger.js';
 import {
     DEFAULT_SETTINGS,
     STORAGE_KEYS,
-    WHITELIST_KEYS
+    ALLOWLIST_KEYS
 } from './constants.js';
 
 import {
@@ -34,31 +34,31 @@ document.getElementById('settingsBtn').addEventListener('click', () => {
 });
 
 /**
- * ホワイトリストボタンの表示を更新
+ * 許可リストボタンの表示を更新
  * @returns {void}
- * @description 現在のドメインがホワイトリストに含まれているかチェックし、
+ * @description 現在のドメインが許可リストに含まれているかチェックし、
  * ボタンのテキストとスタイルを更新する
  */
-function updateWhitelistButton() {
+function updateAllowlistButton() {
     try {
         if (!currentDomain) return;
         
-        chrome.storage.local.get([STORAGE_KEYS.WHITELIST], (result) => {
+        chrome.storage.local.get([STORAGE_KEYS.ALLOWLIST], (result) => {
             try {
                 if (chrome.runtime.lastError) {
-                    Logger.error('ホワイトリスト取得エラー:', chrome.runtime.lastError.message);
+                    Logger.error('許可リスト取得エラー:', chrome.runtime.lastError.message);
                     return;
                 }
                 
-                const whitelist = result[STORAGE_KEYS.WHITELIST] || [];
-                const exists = whitelist.some(entry => {
-                    const domain = entry[WHITELIST_KEYS.DOMAIN];
+                const allowlist = result[STORAGE_KEYS.ALLOWLIST] || [];
+                const exists = allowlist.some(entry => {
+                    const domain = entry[ALLOWLIST_KEYS.DOMAIN];
                     return domain === currentDomain;
                 });
                 
-                const btn = document.getElementById('addToWhitelistBtn');
+                const btn = document.getElementById('addToAllowlistBtn');
                 btn.textContent = chrome.i18n.getMessage(
-                    exists ? 'popup_removeFromWhitelistBtn' : 'popup_addToWhitelistBtn'
+                    exists ? 'popup_removeFromAllowlistBtn' : 'popup_addToAllowlistBtn'
                 );
 
                 // ボタンの色を変更
@@ -78,11 +78,11 @@ function updateWhitelistButton() {
                     currentSiteDiv.textContent = chrome.i18n.getMessage('popup_currentSite', [currentDomain]);
                 }
             } catch (error) {
-                Logger.error('ホワイトリストボタン更新処理エラー:', error);
+                Logger.error('許可リストボタン更新処理エラー:', error);
             }
         });
     } catch (error) {
-        Logger.error('ホワイトリストボタン更新エラー:', error);
+        Logger.error('許可リストボタン更新エラー:', error);
     }
 }
 
@@ -91,7 +91,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         if (chrome.runtime.lastError) {
             Logger.error('タブ情報取得エラー:', chrome.runtime.lastError.message);
             document.getElementById('currentSite').textContent = chrome.i18n.getMessage('popup_cannotGetTabInfo');
-            document.getElementById('addToWhitelistBtn').disabled = true;
+            document.getElementById('addToAllowlistBtn').disabled = true;
             return;
         }
 
@@ -100,22 +100,22 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 const url = new URL(tabs[0].url);
                 if (url.protocol !== 'https:' && url.protocol !== 'http:') {
                     document.getElementById('currentSite').textContent = chrome.i18n.getMessage('popup_cannotAddSite');
-                    document.getElementById('addToWhitelistBtn').disabled = true;
+                    document.getElementById('addToAllowlistBtn').disabled = true;
                     return;
                 }
                 currentDomain = url.hostname;
                 document.getElementById('currentSite').textContent = chrome.i18n.getMessage('popup_currentSite', [currentDomain]);
-                updateWhitelistButton();
+                updateAllowlistButton();
             } catch (e) {
                 Logger.error('URL解析エラー:', e);
                 document.getElementById('currentSite').textContent = chrome.i18n.getMessage('popup_cannotGetCurrentSite');
-                document.getElementById('addToWhitelistBtn').disabled = true;
+                document.getElementById('addToAllowlistBtn').disabled = true;
             }
         }
     } catch (error) {
         Logger.error('タブ情報処理エラー:', error);
         document.getElementById('currentSite').textContent = chrome.i18n.getMessage('popup_errorOccurred');
-        document.getElementById('addToWhitelistBtn').disabled = true;
+        document.getElementById('addToAllowlistBtn').disabled = true;
     }
 });
 
@@ -168,17 +168,17 @@ document.getElementById('executeBtn').addEventListener('click', () => {
 });
 
 /**
- * ホワイトリストを保存して成功メッセージを表示
- * @param {Array<{domain: string, keepCookies: boolean, keepCache: boolean}>} whitelist - 保存するホワイトリスト
+ * 許可リストを保存して成功メッセージを表示
+ * @param {Array<{domain: string, keepCookies: boolean, keepCache: boolean}>} allowlist - 保存する許可リスト
  * @param {string} message - 表示するメッセージ
  * @returns {void}
  */
-function saveWhitelistWithMessage(whitelist, message) {
+function saveAllowlistWithMessage(allowlist, message) {
     try {
-        chrome.storage.local.set({ [STORAGE_KEYS.WHITELIST]: whitelist }, () => {
+        chrome.storage.local.set({ [STORAGE_KEYS.ALLOWLIST]: allowlist }, () => {
             try {
                 if (chrome.runtime.lastError) {
-                    Logger.error('ホワイトリスト保存エラー:', chrome.runtime.lastError.message);
+                    Logger.error('許可リスト保存エラー:', chrome.runtime.lastError.message);
                     displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('popup_saveFailed'));
                     return;
                 }
@@ -195,71 +195,71 @@ function saveWhitelistWithMessage(whitelist, message) {
             }
         });
     } catch (error) {
-        Logger.error('ホワイトリスト保存処理エラー:', error);
+        Logger.error('許可リスト保存処理エラー:', error);
         displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('popup_unexpectedError'));
     }
 }
 
 /**
- * ホワイトリスト追加/除外ボタンのクリックイベントハンドラー
- * @description 現在のドメインをホワイトリストに追加、またはホワイトリストから除外
+ * 許可リスト追加/削除ボタンのクリックイベントハンドラー
+ * @description 現在のドメインを許可リストに追加、または許可リストから外す
  */
-document.getElementById('addToWhitelistBtn').addEventListener('click', () => {
+document.getElementById('addToAllowlistBtn').addEventListener('click', () => {
     try {
         if (!currentDomain) {
             return;
         }
 
-        const btn = document.getElementById('addToWhitelistBtn');
+        const btn = document.getElementById('addToAllowlistBtn');
         // 連打防止：ボタンを無効化
         btn.disabled = true;
 
-        chrome.storage.local.get([STORAGE_KEYS.WHITELIST], (result) => {
+        chrome.storage.local.get([STORAGE_KEYS.ALLOWLIST], (result) => {
             try {
                 if (chrome.runtime.lastError) {
-                    Logger.error('ホワイトリスト取得エラー:', chrome.runtime.lastError.message);
-                    displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('popup_whitelistLoadFailed'));
+                    Logger.error('許可リスト取得エラー:', chrome.runtime.lastError.message);
+                    displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('popup_allowlistLoadFailed'));
                     btn.disabled = false;
                     return;
                 }
 
-                let whitelist = result[STORAGE_KEYS.WHITELIST] || [];
+                let allowlist = result[STORAGE_KEYS.ALLOWLIST] || [];
 
                 // すでに存在するかチェック
-                const existingIndex = whitelist.findIndex(entry => {
-                    const domain = entry[WHITELIST_KEYS.DOMAIN];
+                const existingIndex = allowlist.findIndex(entry => {
+                    const domain = entry[ALLOWLIST_KEYS.DOMAIN];
                     return domain === currentDomain;
                 });
 
                 if (existingIndex !== -1) {
-                    // ホワイトリストから除外
-                    whitelist.splice(existingIndex, 1);
-                    saveWhitelistWithMessage(
-                        whitelist,
-                        chrome.i18n.getMessage('popup_removedFromWhitelist', [currentDomain])
+                    // 許可リストから外す
+                    allowlist.splice(existingIndex, 1);
+                    saveAllowlistWithMessage(
+                        allowlist,
+                        chrome.i18n.getMessage('popup_removedFromAllowlist', [currentDomain])
                     );
                 } else {
                     // 新しいエントリを追加（デフォルトですべて保持）
-                    whitelist.push({
-                        [WHITELIST_KEYS.DOMAIN]: currentDomain,
-                        [WHITELIST_KEYS.KEEP_COOKIES]: DEFAULT_SETTINGS.WHITELIST_KEEP_COOKIES,
-                        [WHITELIST_KEYS.KEEP_CACHE]: DEFAULT_SETTINGS.WHITELIST_KEEP_CACHE
+                    allowlist.push({
+                        [ALLOWLIST_KEYS.DOMAIN]: currentDomain,
+                        [ALLOWLIST_KEYS.KEEP_COOKIES]: DEFAULT_SETTINGS.ALLOWLIST_KEEP_COOKIES,
+                        [ALLOWLIST_KEYS.KEEP_CACHE]: DEFAULT_SETTINGS.ALLOWLIST_KEEP_CACHE
                     });
-                    saveWhitelistWithMessage(
-                        whitelist,
-                        chrome.i18n.getMessage('popup_addedToWhitelist', [currentDomain])
+                    saveAllowlistWithMessage(
+                        allowlist,
+                        chrome.i18n.getMessage('popup_addedToAllowlist', [currentDomain])
                     );
                 }
             } catch (error) {
-                Logger.error('ホワイトリスト処理エラー:', error);
+                Logger.error('許可リスト処理エラー:', error);
                 displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('popup_unexpectedError'));
                 btn.disabled = false;
             }
         });
     } catch (error) {
-        Logger.error('ホワイトリスト追加/除外エラー:', error);
+        Logger.error('許可リスト追加/削除エラー:', error);
         displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('popup_unexpectedError'));
-        const btn = document.getElementById('addToWhitelistBtn');
+        const btn = document.getElementById('addToAllowlistBtn');
         if (btn) btn.disabled = false;
     }
 });

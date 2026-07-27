@@ -3,7 +3,7 @@
     "message": "DeHistory - Automatické mazání historie prohlížení"
   },
   "extDescription": {
-    "message": "Automaticky maže historii prohlížení a další data pomocí naplánovaného spuštění a bílé listiny."
+    "message": "Automaticky maže historii prohlížení a další data pomocí naplánovaného spuštění a seznamu povolených."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Smazat nyní"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Přidat na bílou listinu"
+  "popup_addToAllowlistBtn": {
+    "message": "Přidat na seznam povolených"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Odebrat z bílé listiny"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Odebrat ze seznamu povolených"
   },
   "popup_currentSite": {
     "message": "Aktuální web: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Aktuální web: $DOMAIN$<br>Je na bílé listině",
+    "message": "Aktuální web: $DOMAIN$<br>Je na seznamu povolených",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Došlo k neočekávané chybě"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Nastavení se nepodařilo načíst"
   },
   "popup_saveFailed": {
     "message": "✕ Uložení se nezdařilo"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ Doména $DOMAIN$ byla odebrána z bílé listiny",
+  "popup_removedFromAllowlist": {
+    "message": "✓ Doména $DOMAIN$ byla odebrána ze seznamu povolených",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ Doména $DOMAIN$ byla přidána na bílou listinu",
+  "popup_addedToAllowlist": {
+    "message": "✓ Doména $DOMAIN$ byla přidána na seznam povolených",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Data automatického vyplňování formulářů"
   },
-  "options_whitelistLabel": {
-    "message": "Bílá listina"
+  "options_allowlistLabel": {
+    "message": "Seznam povolených"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Určete weby, které se nemají mazat."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Samostatně lze nastavit pouze soubory cookie a mezipaměť; ostatní položky se vždy řídí společným nastavením."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Formát"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Použijte jeden z následujících formátů."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Podrobný formát"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "doména, příznak cookie, příznak mezipaměti"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: zachovat"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: smazat"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Zkrácený formát"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "doména"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Soubory cookie i mezipaměť se považují za „zachované“."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Příklady"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Zachovat cookie, zachovat mezipaměť"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Zachovat cookie, smazat mezipaměť"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Při vynechání se zachová vše"
   },
   "options_errorListTitle": {
     "message": "Chyby zadání:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

@@ -3,7 +3,7 @@
     "message": "DeHistory - Effacer automatiquement l'historique de navigation"
   },
   "extDescription": {
-    "message": "Supprime automatiquement l'historique de navigation et d'autres données grâce à des exécutions planifiées et à une liste blanche."
+    "message": "Supprime automatiquement l'historique de navigation et d'autres données, avec exécutions planifiées et liste d'autorisation."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Supprimer maintenant"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Ajouter à la liste blanche"
+  "popup_addToAllowlistBtn": {
+    "message": "Ajouter à la liste d'autorisation"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Retirer de la liste blanche"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Retirer de la liste d'autorisation"
   },
   "popup_currentSite": {
     "message": "Site actuel : $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Site actuel : $DOMAIN$<br>Enregistré dans la liste blanche",
+    "message": "Site actuel : $DOMAIN$<br>Enregistré dans la liste d'autorisation",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Une erreur inattendue s'est produite"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Échec du chargement des paramètres"
   },
   "popup_saveFailed": {
     "message": "✕ Échec de l'enregistrement"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ retiré de la liste blanche",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ retiré de la liste d'autorisation",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ ajouté à la liste blanche",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ ajouté à la liste d'autorisation",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Données de saisie automatique des formulaires"
   },
-  "options_whitelistLabel": {
-    "message": "Liste blanche"
+  "options_allowlistLabel": {
+    "message": "Liste d'autorisation"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Indiquez les sites à exclure de la suppression."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Seuls les cookies et le cache peuvent être configurés individuellement ; les autres éléments suivent toujours les paramètres communs."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Format"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Utilisez l'un des formats suivants."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Format détaillé"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "domaine, indicateur cookies, indicateur cache"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1 : conserver"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0 : supprimer"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Format abrégé"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "domaine"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Les cookies et le cache sont tous deux traités comme « à conserver »."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Exemples"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Conserver les cookies, conserver le cache"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Conserver les cookies, supprimer le cache"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Tout est conservé en cas d'omission"
   },
   "options_errorListTitle": {
     "message": "Erreurs de saisie :"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

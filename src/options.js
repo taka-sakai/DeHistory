@@ -1,19 +1,19 @@
 /**
  * @file オプションページのスクリプト
- * @description ホワイトリストと実行設定を管理するUIロジック
+ * @description 許可リストと実行設定を管理するUIロジック
  */
 
 import { Logger } from './logger.js';
 import {
     DEFAULT_SETTINGS,
     STORAGE_KEYS,
-    WHITELIST_KEYS
+    ALLOWLIST_KEYS
 } from './constants.js';
 
 import {
     displayStatusMessage,
     clearStatusMessage,
-    parseWhitelistLine
+    parseAllowlistLine
 } from './utils.js';
 
 import { applyI18n } from './i18n.js';
@@ -38,12 +38,12 @@ function showErrorList(messages) {
 }
 
 /**
- * ページ読み込み時にストレージからホワイトリストと設定を読み込んで表示
+ * ページ読み込み時にストレージから許可リストと設定を読み込んで表示
  */
 document.addEventListener('DOMContentLoaded', () => {
     try {
         chrome.storage.local.get([
-            STORAGE_KEYS.WHITELIST,
+            STORAGE_KEYS.ALLOWLIST,
             STORAGE_KEYS.RUN_ON_STARTUP,
             STORAGE_KEYS.RUN_ON_CLOSE,
             STORAGE_KEYS.REMOVE_DOWNLOADS,
@@ -62,16 +62,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // 配列であることを保証
-                const whitelist = result[STORAGE_KEYS.WHITELIST] || [];
+                const allowlist = result[STORAGE_KEYS.ALLOWLIST] || [];
 
                 // オブジェクト形式からカンマ区切り形式に変換して表示
-                const lines = whitelist.map(entry => {
-                    const domain = entry[WHITELIST_KEYS.DOMAIN];
-                    const keepCookies = entry[WHITELIST_KEYS.KEEP_COOKIES] ? 1 : 0;
-                    const keepCache = entry[WHITELIST_KEYS.KEEP_CACHE] ? 1 : 0;
+                const lines = allowlist.map(entry => {
+                    const domain = entry[ALLOWLIST_KEYS.DOMAIN];
+                    const keepCookies = entry[ALLOWLIST_KEYS.KEEP_COOKIES] ? 1 : 0;
+                    const keepCache = entry[ALLOWLIST_KEYS.KEEP_CACHE] ? 1 : 0;
                     return `${domain},${keepCookies},${keepCache}`;
                 });
-                document.getElementById('whitelist').value = lines.join('\n');
+                document.getElementById('allowlist').value = lines.join('\n');
                 document.getElementById('runOnStartup').checked = result[STORAGE_KEYS.RUN_ON_STARTUP] ?? DEFAULT_SETTINGS.RUN_ON_STARTUP;
                 document.getElementById('runOnClose').checked = result[STORAGE_KEYS.RUN_ON_CLOSE] ?? DEFAULT_SETTINGS.RUN_ON_CLOSE;
                 document.getElementById('removeDownloads').checked = result[STORAGE_KEYS.REMOVE_DOWNLOADS] ?? DEFAULT_SETTINGS.REMOVE_DOWNLOADS;
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * 保存ボタンのクリックイベントハンドラー
- * @description ホワイトリストと設定をバリデーションしてストレージに保存
+ * @description 許可リストと設定をバリデーションしてストレージに保存
  */
 document.getElementById('save').addEventListener('click', () => {
     try {
@@ -100,20 +100,20 @@ document.getElementById('save').addEventListener('click', () => {
         // 連打防止：ボタンを無効化
         saveButton.disabled = true;
 
-        const textarea = document.getElementById('whitelist');
+        const textarea = document.getElementById('allowlist');
         const lines = textarea.value
             .split('\n')
             .map(line => line.trim())
             .filter(line => line.length > 0);
 
-        const whitelist = [];
+        const allowlist = [];
         const invalidLines = [];
 
         // 各行をパース: [ドメイン,keepCookies,keepCache]形式または[ドメイン]形式
         lines.forEach((line, index) => {
-            const result = parseWhitelistLine(line, index);
+            const result = parseAllowlistLine(line, index);
             if (result.success) {
-                whitelist.push(result.entry);
+                allowlist.push(result.entry);
             } else {
                 invalidLines.push(result.error);
             }
@@ -121,7 +121,7 @@ document.getElementById('save').addEventListener('click', () => {
 
     // バリデーションエラーがあれば警告表示して保存を中止
     if (invalidLines.length > 0) {
-        Logger.warn('ホワイトリストのバリデーションエラー:', invalidLines);
+        Logger.warn('許可リストのバリデーションエラー:', invalidLines);
         showErrorList(invalidLines);
 
         displayStatusMessage(document.getElementById('status'), chrome.i18n.getMessage('options_validationErrorCount', [String(invalidLines.length)]));
@@ -132,8 +132,8 @@ document.getElementById('save').addEventListener('click', () => {
     // ドメインの重複チェック
     const domainMap = new Map();
     const duplicates = [];
-    whitelist.forEach((entry, index) => {
-        const domain = entry[WHITELIST_KEYS.DOMAIN];
+    allowlist.forEach((entry, index) => {
+        const domain = entry[ALLOWLIST_KEYS.DOMAIN];
         if (domainMap.has(domain)) {
             duplicates.push(chrome.i18n.getMessage('options_duplicateLine', [
                 String(index + 1),
@@ -163,7 +163,7 @@ document.getElementById('save').addEventListener('click', () => {
     const removeCacheAndStorage = document.getElementById('removeCacheAndStorage').checked;
 
     chrome.storage.local.set({
-        [STORAGE_KEYS.WHITELIST]: whitelist,
+        [STORAGE_KEYS.ALLOWLIST]: allowlist,
         [STORAGE_KEYS.RUN_ON_STARTUP]: runOnStartup,
         [STORAGE_KEYS.RUN_ON_CLOSE]: runOnClose,
         [STORAGE_KEYS.REMOVE_DOWNLOADS]: removeDownloads,

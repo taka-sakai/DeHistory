@@ -3,7 +3,7 @@
     "message": "DeHistory - Automatyczne czyszczenie historii przeglądania"
   },
   "extDescription": {
-    "message": "Automatycznie usuwa historię przeglądania i inne dane dzięki zaplanowanym uruchomieniom i białej liście."
+    "message": "Automatycznie usuwa historię przeglądania i inne dane dzięki zaplanowanym uruchomieniom i liście dozwolonych."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Usuń teraz"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Dodaj do białej listy"
+  "popup_addToAllowlistBtn": {
+    "message": "Dodaj do listy dozwolonych"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Usuń z białej listy"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Usuń z listy dozwolonych"
   },
   "popup_currentSite": {
     "message": "Bieżąca witryna: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Bieżąca witryna: $DOMAIN$<br>Znajduje się na białej liście",
+    "message": "Bieżąca witryna: $DOMAIN$<br>Znajduje się na liście dozwolonych",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Wystąpił nieoczekiwany błąd"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Nie udało się wczytać ustawień"
   },
   "popup_saveFailed": {
     "message": "✕ Nie udało się zapisać"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ Usunięto $DOMAIN$ z białej listy",
+  "popup_removedFromAllowlist": {
+    "message": "✓ Usunięto $DOMAIN$ z listy dozwolonych",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ Dodano $DOMAIN$ do białej listy",
+  "popup_addedToAllowlist": {
+    "message": "✓ Dodano $DOMAIN$ do listy dozwolonych",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Dane autouzupełniania formularzy"
   },
-  "options_whitelistLabel": {
-    "message": "Biała lista"
+  "options_allowlistLabel": {
+    "message": "Lista dozwolonych"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Wskaż witryny, które mają być wykluczone z usuwania."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Tylko pliki cookie i pamięć podręczna mogą być ustawiane osobno; pozostałe elementy zawsze podlegają ustawieniom wspólnym."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Format"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Użyj jednego z poniższych formatów."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Format szczegółowy"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "domena, flaga cookie, flaga cache"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: zachowaj"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: usuń"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Format skrócony"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "domena"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Zarówno pliki cookie, jak i pamięć podręczna są traktowane jako „zachowaj”."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Przykłady"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Zachowaj pliki cookie, zachowaj pamięć podręczną"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Zachowaj pliki cookie, usuń pamięć podręczną"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ W przypadku pominięcia wszystko jest zachowywane"
   },
   "options_errorListTitle": {
     "message": "Błędy wprowadzania:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

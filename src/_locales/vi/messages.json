@@ -3,7 +3,7 @@
     "message": "DeHistory - Tự động xóa lịch sử duyệt web"
   },
   "extDescription": {
-    "message": "Tự động xóa lịch sử duyệt web và dữ liệu khác bằng tính năng chạy theo lịch và danh sách trắng."
+    "message": "Tự động xóa lịch sử duyệt web và dữ liệu khác bằng tính năng chạy theo lịch và danh sách cho phép."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Xóa ngay"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Thêm vào danh sách trắng"
+  "popup_addToAllowlistBtn": {
+    "message": "Thêm vào danh sách cho phép"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Xóa khỏi danh sách trắng"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Gỡ khỏi danh sách cho phép"
   },
   "popup_currentSite": {
     "message": "Trang hiện tại: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Trang hiện tại: $DOMAIN$<br>Đã có trong danh sách trắng",
+    "message": "Trang hiện tại: $DOMAIN$<br>Đã có trong danh sách cho phép",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Đã xảy ra lỗi không mong muốn"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Không tải được cài đặt"
   },
   "popup_saveFailed": {
     "message": "✕ Không lưu được"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ Đã xóa $DOMAIN$ khỏi danh sách trắng",
+  "popup_removedFromAllowlist": {
+    "message": "✓ Đã gỡ $DOMAIN$ khỏi danh sách cho phép",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ Đã thêm $DOMAIN$ vào danh sách trắng",
+  "popup_addedToAllowlist": {
+    "message": "✓ Đã thêm $DOMAIN$ vào danh sách cho phép",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Dữ liệu tự động điền biểu mẫu"
   },
-  "options_whitelistLabel": {
-    "message": "Danh sách trắng"
+  "options_allowlistLabel": {
+    "message": "Danh sách cho phép"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Chỉ định các trang web được loại trừ khỏi việc xóa."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Chỉ cookie và bộ nhớ đệm có thể được đặt riêng; các mục khác luôn tuân theo cài đặt chung."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Định dạng"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Hãy dùng một trong các định dạng sau."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Định dạng chi tiết"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "tên miền, cờ cookie, cờ bộ nhớ đệm"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: giữ lại"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: xóa"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Định dạng rút gọn"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "tên miền"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Cả cookie và bộ nhớ đệm đều được xem là \"giữ lại\"."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Ví dụ"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Giữ cookie, giữ bộ nhớ đệm"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Giữ cookie, xóa bộ nhớ đệm"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Nếu bỏ qua thì mọi thứ đều được giữ lại"
   },
   "options_errorListTitle": {
     "message": "Lỗi nhập:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

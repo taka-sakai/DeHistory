@@ -3,7 +3,7 @@
     "message": "DeHistory - 自動清除瀏覽紀錄"
   },
   "extDescription": {
-    "message": "透過排程執行與白名單功能，自動刪除瀏覽紀錄等資料。"
+    "message": "透過排程執行與允許清單功能，自動刪除瀏覽紀錄等資料。"
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "立即刪除"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "加入白名單"
+  "popup_addToAllowlistBtn": {
+    "message": "加入允許清單"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "從白名單移除"
+  "popup_removeFromAllowlistBtn": {
+    "message": "從允許清單移除"
   },
   "popup_currentSite": {
     "message": "目前網站：$DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "目前網站：$DOMAIN$<br>已登錄於白名單",
+    "message": "目前網站：$DOMAIN$<br>已加入允許清單",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ 發生非預期的錯誤"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ 載入設定失敗"
   },
   "popup_saveFailed": {
     "message": "✕ 儲存失敗"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ 已將 $DOMAIN$ 從白名單移除",
+  "popup_removedFromAllowlist": {
+    "message": "✓ 已將 $DOMAIN$ 從允許清單移除",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ 已將 $DOMAIN$ 加入白名單",
+  "popup_addedToAllowlist": {
+    "message": "✓ 已將 $DOMAIN$ 加入允許清單",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "自動填入的表單資料"
   },
-  "options_whitelistLabel": {
-    "message": "白名單"
+  "options_allowlistLabel": {
+    "message": "允許清單"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "指定不進行刪除的網站。"
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "※僅 Cookie 與快取可個別設定，其他項目一律套用共用設定。"
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "格式"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "請以下列任一格式指定。"
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. 詳細格式"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "網域, Cookie旗標, 快取旗標"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1：保留"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0：刪除"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. 簡略格式"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "網域"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Cookie 與快取皆視為「保留」。"
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "範例"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ 保留 Cookie、保留快取"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ 保留 Cookie、刪除快取"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ 省略時全部保留"
   },
   "options_errorListTitle": {
     "message": "輸入錯誤："
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

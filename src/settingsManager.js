@@ -7,7 +7,7 @@ import { Logger } from './logger.js';
 import {
     DEFAULT_SETTINGS,
     STORAGE_KEYS,
-    WHITELIST_KEYS
+    ALLOWLIST_KEYS
 } from './constants.js';
 
 class SettingsManager {
@@ -20,7 +20,7 @@ class SettingsManager {
      * @private
      */
     initializeDefaults() {
-        this.whitelist = [];
+        this.allowlist = [];
         this.runOnStartup = DEFAULT_SETTINGS.RUN_ON_STARTUP;
         this.runOnClose = DEFAULT_SETTINGS.RUN_ON_CLOSE;
         this.removeDownloads = DEFAULT_SETTINGS.REMOVE_DOWNLOADS;
@@ -71,7 +71,7 @@ class SettingsManager {
      */
     applyLoadedSettings(result) {
         try {
-            this.whitelist = result[STORAGE_KEYS.WHITELIST] ?? [];
+            this.allowlist = result[STORAGE_KEYS.ALLOWLIST] ?? [];
             this.runOnStartup = result[STORAGE_KEYS.RUN_ON_STARTUP] ?? DEFAULT_SETTINGS.RUN_ON_STARTUP;
             this.runOnClose = result[STORAGE_KEYS.RUN_ON_CLOSE] ?? DEFAULT_SETTINGS.RUN_ON_CLOSE;
             this.removeDownloads = result[STORAGE_KEYS.REMOVE_DOWNLOADS] ?? DEFAULT_SETTINGS.REMOVE_DOWNLOADS;
@@ -91,7 +91,7 @@ class SettingsManager {
      */
     logLoadedSettings() {
         Logger.debug('設定を読み込みました:', {
-            whitelistCount: this.whitelist.length,
+            allowlistCount: this.allowlist.length,
             runOnStartup: this.runOnStartup,
             runOnClose: this.runOnClose,
             removeDownloads: this.removeDownloads,
@@ -103,16 +103,16 @@ class SettingsManager {
     }
 
     /**
-     * ドメインごとのフラグに基づいて除外するオリジンリストを生成
-     * @param {string} flagName - フラグ名（WHITELIST_KEYS.KEEP_COOKIES または WHITELIST_KEYS.KEEP_CACHE）
+     * ドメインごとのフラグに基づいて、削除から除外するオリジンのリストを生成
+     * @param {string} flagName - フラグ名（ALLOWLIST_KEYS.KEEP_COOKIES または ALLOWLIST_KEYS.KEEP_CACHE）
      * @returns {Array<string>} オリジンの配列
      */
     getOriginsByFlag(flagName) {
         try {
-            return this.whitelist
+            return this.allowlist
                 .filter(entry => entry[flagName] === 1)
                 .flatMap(entry => {
-                    const domain = entry[WHITELIST_KEYS.DOMAIN].trim();
+                    const domain = entry[ALLOWLIST_KEYS.DOMAIN].trim();
                     return [`https://${domain}`, `http://${domain}`];
                 });
         } catch (error) {
@@ -134,7 +134,7 @@ class SettingsManager {
      */
     toObject() {
         return {
-            whitelist: this.whitelist,
+            allowlist: this.allowlist,
             runOnStartup: this.runOnStartup,
             runOnClose: this.runOnClose,
             removeDownloads: this.removeDownloads,

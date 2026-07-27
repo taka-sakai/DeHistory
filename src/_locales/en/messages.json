@@ -3,7 +3,7 @@
     "message": "DeHistory - Automatically Clear Browsing History"
   },
   "extDescription": {
-    "message": "Deletes browsing history and other data automatically, using scheduled runs and a whitelist feature."
+    "message": "Deletes browsing history and other data automatically, using scheduled runs and an allowlist."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Delete Now"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Add to Whitelist"
+  "popup_addToAllowlistBtn": {
+    "message": "Add to Allowlist"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Remove from Whitelist"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Remove from Allowlist"
   },
   "popup_currentSite": {
     "message": "Current site: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Current site: $DOMAIN$<br>Registered in whitelist",
+    "message": "Current site: $DOMAIN$<br>On the allowlist",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ An unexpected error occurred"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Failed to load settings"
   },
   "popup_saveFailed": {
     "message": "✕ Failed to save"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ removed from whitelist",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ removed from the allowlist",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ added to whitelist",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ added to the allowlist",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Autofill form data"
   },
-  "options_whitelistLabel": {
-    "message": "Whitelist"
+  "options_allowlistLabel": {
+    "message": "Allowlist"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Specify sites to exclude from deletion."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Only cookies and cache can be set individually; other items always follow the common settings."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Format"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Specify using one of the following formats."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Detailed format"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "domain, cookieFlag, cacheFlag"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: keep"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: delete"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Short format"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "domain"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Both cookies and cache are treated as \"keep\"."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Examples"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Keep cookies, keep cache"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Keep cookies, delete cache"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Everything kept when omitted"
   },
   "options_errorListTitle": {
     "message": "Input errors:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

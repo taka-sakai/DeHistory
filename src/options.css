@@ -154,7 +154,7 @@ button.danger:hover {
     padding-left: 3em;
 }
 
-.whitelist-header {
+.allowlist-header {
     display: flex;
     align-items: center;
     gap: 8px;

@@ -3,7 +3,7 @@
     "message": "DeHistory - 閲覧履歴を自動で削除"
   },
   "extDescription": {
-    "message": "自動実行やホワイトリスト機能を使って閲覧履歴などを削除します。"
+    "message": "自動実行や許可リスト機能を使って閲覧履歴などを削除します。"
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "今すぐ削除する"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "ホワイトリストに追加する"
+  "popup_addToAllowlistBtn": {
+    "message": "許可リストに追加する"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "ホワイトリストから除外する"
+  "popup_removeFromAllowlistBtn": {
+    "message": "許可リストから外す"
   },
   "popup_currentSite": {
     "message": "現在のサイト: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "現在のサイト: $DOMAIN$<br>ホワイトリストに登録されています",
+    "message": "現在のサイト: $DOMAIN$<br>許可リストに登録されています",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ 予期しないエラーが発生しました"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ 設定の読み込みに失敗しました"
   },
   "popup_saveFailed": {
     "message": "✕ 保存に失敗しました"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ をホワイトリストから除外しました",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ を許可リストから外しました",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ をホワイトリストに追加しました",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ を許可リストに追加しました",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "自動入力フォームのデータ"
   },
-  "options_whitelistLabel": {
-    "message": "ホワイトリスト"
+  "options_allowlistLabel": {
+    "message": "許可リスト"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "削除対象外にするサイトを指定します。"
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "※Cookieとキャッシュのみ個別設定が可能で、その他の項目には共通設定が適用されます。"
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "設定フォーマット"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "以下のいずれかで指定してください。"
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1、個別指定形式"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "ドメイン, Cookieフラグ, キャッシュフラグ"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "・1:保持する"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "・0:削除する"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2、省略形式"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "ドメイン"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "・Cookie、キャッシュともに「保持」として扱われます。"
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "記述例"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Cookie保持、キャッシュ保持"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Cookie保持、キャッシュ削除"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ 省略時はすべて保持"
   },
   "options_errorListTitle": {
     "message": "入力エラー:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

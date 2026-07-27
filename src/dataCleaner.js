@@ -4,7 +4,7 @@
  */
 
 import { Logger } from './logger.js';
-import { WHITELIST_KEYS } from './constants.js';
+import { ALLOWLIST_KEYS } from './constants.js';
 import { SettingsManager } from './settingsManager.js';
 
 class DataCleaner {
@@ -54,7 +54,7 @@ class DataCleaner {
     }
 
     /**
-     * ホワイトリストを考慮せずブラウジングデータを一括削除
+     * 許可リストを考慮せずブラウジングデータを一括削除
      * @returns {Promise<void>}
      * @private
      */
@@ -95,7 +95,7 @@ class DataCleaner {
     }
 
     /**
-     * ホワイトリストを考慮してCookiesを削除
+     * 許可リストを考慮してCookiesを削除
      * @returns {Promise<void>}
      * @private
      */
@@ -105,7 +105,7 @@ class DataCleaner {
             return;
         }
 
-        const excludeOrigins = this.settings.getOriginsByFlag(WHITELIST_KEYS.KEEP_COOKIES);
+        const excludeOrigins = this.settings.getOriginsByFlag(ALLOWLIST_KEYS.KEEP_COOKIES);
         const dataTypes = {
             cookies: true,
             cacheStorage: true,
@@ -126,7 +126,7 @@ class DataCleaner {
     }
 
     /**
-     * ホワイトリストを考慮してキャッシュを削除
+     * 許可リストを考慮してキャッシュを削除
      * @returns {Promise<void>}
      * @private
      */
@@ -136,7 +136,7 @@ class DataCleaner {
             return;
         }
 
-        const excludeOrigins = this.settings.getOriginsByFlag(WHITELIST_KEYS.KEEP_CACHE);
+        const excludeOrigins = this.settings.getOriginsByFlag(ALLOWLIST_KEYS.KEEP_CACHE);
         const dataTypes = {
             cache: true
         };
@@ -156,7 +156,7 @@ class DataCleaner {
      * @param {Object} dataTypes - 削除するデータタイプ
      * @param {string} categoryName - カテゴリ名（ログ用）
      * @param {Array<string>} typesList - データタイプのリスト（ログ用）
-     * @param {number} excludeCount - 除外されたオリジンの数
+     * @param {number} excludeCount - 削除から除外したオリジンの数
      * @returns {Promise<void>}
      * @private
      */

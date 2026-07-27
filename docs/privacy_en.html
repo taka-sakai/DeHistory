@@ -20,14 +20,14 @@
 
   <section>
     <h2>Overview</h2>
-    <p>DeHistory is a browser extension that provides automatic and manual deletion of browsing history, whitelist, and automation features. This policy explains how data is handled in relation to the extension.</p>
+    <p>DeHistory is a browser extension that provides automatic and manual deletion of browsing history, an allowlist, and automation features. This policy explains how data is handled in relation to the extension.</p>
   </section>
 
   <section>
     <h2>Information We Collect</h2>
     <ul>
       <li><strong>Browsing Data:</strong> The extension uses the `browsingData` API to remove browsing history and related data. The extension does not collect, store, or transmit the contents of users' browsing history to external servers.</li>
-      <li><strong>Local Settings:</strong> User preferences such as whitelists, auto-run settings, and UI options are stored locally using the `storage` API.</li>
+      <li><strong>Local Settings:</strong> User preferences such as the allowlist, auto-run settings, and UI options are stored locally using the `storage` API.</li>
       <li><strong>Tab and Window Info:</strong> The extension may access basic metadata (tab IDs, window IDs, active state) via the `tabs` and `windows` APIs to determine deletion targets and provide contextual UI. These are used only for deletion logic and UI purposes.</li>
       <li><strong>Personal Data:</strong> The current implementation does not collect personal identifying information (e.g., name, email) by default, nor does it transmit browsing content externally.</li>
     </ul>
@@ -36,7 +36,7 @@
   <section>
     <h2>Permissions and How We Use Them</h2>
     <ul>
-      <li><strong>storage:</strong> To save and read user settings (whitelist, options, state) locally.</li>
+      <li><strong>storage:</strong> To save and read user settings (allowlist, options, state) locally.</li>
       <li><strong>browsingData:</strong> To delete user-specified ranges of browsing history, cache, and related data.</li>
       <li><strong>tabs / windows:</strong> To identify targets for deletion, provide contextual UI, and perform explicit user-initiated operations.</li>
     </ul>

@@ -3,7 +3,7 @@
     "message": "DeHistory - Cancella la cronologia di navigazione automaticamente"
   },
   "extDescription": {
-    "message": "Elimina automaticamente la cronologia di navigazione e altri dati, con esecuzioni pianificate e una whitelist."
+    "message": "Elimina automaticamente la cronologia di navigazione e altri dati, con esecuzioni pianificate e un elenco di siti consentiti."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Elimina ora"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Aggiungi alla whitelist"
+  "popup_addToAllowlistBtn": {
+    "message": "Aggiungi ai siti consentiti"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Rimuovi dalla whitelist"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Rimuovi dai siti consentiti"
   },
   "popup_currentSite": {
     "message": "Sito corrente: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Sito corrente: $DOMAIN$<br>Presente nella whitelist",
+    "message": "Sito corrente: $DOMAIN$<br>È tra i siti consentiti",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Si è verificato un errore imprevisto"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Caricamento delle impostazioni non riuscito"
   },
   "popup_saveFailed": {
     "message": "✕ Salvataggio non riuscito"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ rimosso dalla whitelist",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ rimosso dai siti consentiti",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ aggiunto alla whitelist",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ aggiunto ai siti consentiti",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Dati di compilazione automatica dei moduli"
   },
-  "options_whitelistLabel": {
-    "message": "Whitelist"
+  "options_allowlistLabel": {
+    "message": "Siti consentiti"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Indica i siti da escludere dall'eliminazione."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Solo cookie e cache possono essere configurati singolarmente; gli altri elementi seguono sempre le impostazioni comuni."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Formato"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Usa uno dei formati seguenti."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Formato dettagliato"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "dominio, flag cookie, flag cache"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: mantieni"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: elimina"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Formato abbreviato"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "dominio"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Sia i cookie sia la cache vengono trattati come «da mantenere»."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Esempi"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Mantieni i cookie, mantieni la cache"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Mantieni i cookie, elimina la cache"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Se omesso, viene mantenuto tutto"
   },
   "options_errorListTitle": {
     "message": "Errori di immissione:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

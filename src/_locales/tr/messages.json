@@ -3,7 +3,7 @@
     "message": "DeHistory - Tarama geçmişini otomatik olarak sil"
   },
   "extDescription": {
-    "message": "Zamanlanmış çalıştırma ve beyaz liste özelliğiyle tarama geçmişini ve diğer verileri otomatik olarak siler."
+    "message": "Zamanlanmış çalıştırma ve izin listesi özelliğiyle tarama geçmişini ve diğer verileri otomatik olarak siler."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Şimdi sil"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Beyaz listeye ekle"
+  "popup_addToAllowlistBtn": {
+    "message": "İzin listesine ekle"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Beyaz listeden çıkar"
+  "popup_removeFromAllowlistBtn": {
+    "message": "İzin listesinden çıkar"
   },
   "popup_currentSite": {
     "message": "Geçerli site: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Geçerli site: $DOMAIN$<br>Beyaz listede kayıtlı",
+    "message": "Geçerli site: $DOMAIN$<br>İzin listesinde kayıtlı",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Beklenmeyen bir hata oluştu"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Ayarlar yüklenemedi"
   },
   "popup_saveFailed": {
     "message": "✕ Kaydedilemedi"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ beyaz listeden çıkarıldı",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ izin listesinden çıkarıldı",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ beyaz listeye eklendi",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ izin listesine eklendi",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Otomatik doldurulan form verileri"
   },
-  "options_whitelistLabel": {
-    "message": "Beyaz liste"
+  "options_allowlistLabel": {
+    "message": "İzin listesi"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Silme işleminin dışında tutulacak siteleri belirtin."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Yalnızca çerezler ve önbellek ayrı ayrı ayarlanabilir; diğer öğeler her zaman ortak ayarları izler."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Biçim"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Aşağıdaki biçimlerden birini kullanın."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Ayrıntılı biçim"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "alan adı, çerez bayrağı, önbellek bayrağı"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: koru"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: sil"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Kısa biçim"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "alan adı"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• Hem çerezler hem de önbellek \"korunacak\" olarak kabul edilir."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Örnekler"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Çerezleri koru, önbelleği koru"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Çerezleri koru, önbelleği sil"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Belirtilmezse her şey korunur"
   },
   "options_errorListTitle": {
     "message": "Giriş hataları:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {

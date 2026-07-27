@@ -26,16 +26,16 @@ const WIDTH = 1280;
 const HEIGHT = 800;
 
 // ポップアップはブラウザUIなのでページの拡大では大きくならず、表示倍率でしか変えられない。
-// オプション画面は同じ倍率だと高さ200pxのホワイトリスト入力欄が画面外に出るため下げる。
+// オプション画面は同じ倍率だと高さ200pxの許可リスト入力欄が画面外に出るため下げる。
 const SCALE_POPUP = Number(process.env.SCALE_POPUP || 1.75);
 const SCALE_OPTIONS = Number(process.env.SCALE_OPTIONS || 1.45);
 
 // ポップアップの背景に出すページ。情報量が多いと拡張機能のUIが埋もれる。
-// ホワイトリストの記入例（example.com / example.net）と別のドメインにしないと、
-// ポップアップが「ホワイトリストから除外する」状態になってしまう。
+// 許可リストの記入例（example.com / example.net）と別のドメインにしないと、
+// ポップアップが「許可リストから外す」状態になってしまう。
 const BACKDROP = process.env.BACKDROP || 'https://example.org/';
 
-const WHITELIST_SEED = 'example.com,1,1\nexample.net';
+const ALLOWLIST_SEED = 'example.com,1,1\nexample.net';
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -100,7 +100,7 @@ async function prepareProfile(profile, lang) {
 
     const p = await b.newPage();
     await p.goto(`chrome-extension://${id}/options.html`, { waitUntil: 'networkidle0' });
-    await p.evaluate(seed => { document.getElementById('whitelist').value = seed; }, WHITELIST_SEED);
+    await p.evaluate(seed => { document.getElementById('allowlist').value = seed; }, ALLOWLIST_SEED);
     await p.click('#save');
     await sleep(700);
     await b.close();
@@ -128,13 +128,13 @@ async function shootOptions(profile, lang, locale, id) {
         return {
             viewport: `${d.clientWidth}x${d.clientHeight}`,
             overflowX: d.scrollWidth - d.clientWidth,
-            textareaBottom: Math.round(document.getElementById('whitelist').getBoundingClientRect().bottom),
+            textareaBottom: Math.round(document.getElementById('allowlist').getBoundingClientRect().bottom),
             clientHeight: d.clientHeight,
         };
     });
     if (m.overflowX > 0) console.warn(`  ! 横スクロールバーが出ています (${m.overflowX}px)。SCALE_OPTIONS を下げてください`);
-    if (m.textareaBottom > m.clientHeight) console.warn('  ! ホワイトリスト入力欄が画面外です。SCALE_OPTIONS を下げてください');
-    console.log(`  options viewport=${m.viewport} overflowX=${m.overflowX} whitelistVisible=${m.textareaBottom <= m.clientHeight}`);
+    if (m.textareaBottom > m.clientHeight) console.warn('  ! 許可リスト入力欄が画面外です。SCALE_OPTIONS を下げてください');
+    console.log(`  options viewport=${m.viewport} overflowX=${m.overflowX} allowlistVisible=${m.textareaBottom <= m.clientHeight}`);
 
     await sleep(800);
     console.log('  ' + ps('-ProcessId', String(b.process().pid),

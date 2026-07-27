@@ -3,7 +3,7 @@
     "message": "DeHistory - автоматичне очищення історії перегляду"
   },
   "extDescription": {
-    "message": "Автоматично видаляє історію перегляду та інші дані за допомогою запуску за розкладом і білого списку."
+    "message": "Автоматично видаляє історію перегляду та інші дані за допомогою запуску за розкладом і списку дозволених сайтів."
   },
 
   "popup_settingsBtnTitle": {
@@ -12,11 +12,11 @@
   "popup_executeBtn": {
     "message": "Видалити зараз"
   },
-  "popup_addToWhitelistBtn": {
-    "message": "Додати до білого списку"
+  "popup_addToAllowlistBtn": {
+    "message": "Додати до списку дозволених"
   },
-  "popup_removeFromWhitelistBtn": {
-    "message": "Вилучити з білого списку"
+  "popup_removeFromAllowlistBtn": {
+    "message": "Вилучити зі списку дозволених"
   },
   "popup_currentSite": {
     "message": "Поточний сайт: $DOMAIN$",
@@ -25,7 +25,7 @@
     }
   },
   "popup_currentSiteRegistered": {
-    "message": "Поточний сайт: $DOMAIN$<br>Є в білому списку",
+    "message": "Поточний сайт: $DOMAIN$<br>Є у списку дозволених",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -57,20 +57,20 @@
   "popup_unexpectedError": {
     "message": "✕ Сталася неочікувана помилка"
   },
-  "popup_whitelistLoadFailed": {
+  "popup_allowlistLoadFailed": {
     "message": "✕ Не вдалося завантажити налаштування"
   },
   "popup_saveFailed": {
     "message": "✕ Не вдалося зберегти"
   },
-  "popup_removedFromWhitelist": {
-    "message": "✓ $DOMAIN$ вилучено з білого списку",
+  "popup_removedFromAllowlist": {
+    "message": "✓ $DOMAIN$ вилучено зі списку дозволених",
     "placeholders": {
       "domain": { "content": "$1" }
     }
   },
-  "popup_addedToWhitelist": {
-    "message": "✓ $DOMAIN$ додано до білого списку",
+  "popup_addedToAllowlist": {
+    "message": "✓ $DOMAIN$ додано до списку дозволених",
     "placeholders": {
       "domain": { "content": "$1" }
     }
@@ -115,58 +115,58 @@
   "options_removeFormData": {
     "message": "Дані автозаповнення форм"
   },
-  "options_whitelistLabel": {
-    "message": "Білий список"
+  "options_allowlistLabel": {
+    "message": "Список дозволених"
   },
-  "options_whitelistDesc": {
+  "options_allowlistDesc": {
     "message": "Укажіть сайти, які не потрібно очищати."
   },
-  "options_whitelistNote": {
+  "options_allowlistNote": {
     "message": "* Окремо можна налаштувати лише файли cookie та кеш; інші елементи завжди підпорядковані спільним налаштуванням."
   },
-  "options_whitelistFormatTitle": {
+  "options_allowlistFormatTitle": {
     "message": "Формат"
   },
-  "options_whitelistFormatIntro": {
+  "options_allowlistFormatIntro": {
     "message": "Використовуйте один із наведених форматів."
   },
-  "options_whitelistFormat1Title": {
+  "options_allowlistFormat1Title": {
     "message": "1. Докладний формат"
   },
-  "options_whitelistFormat1Code": {
+  "options_allowlistFormat1Code": {
     "message": "домен, прапорець cookie, прапорець кешу"
   },
-  "options_whitelistFlag1": {
+  "options_allowlistFlag1": {
     "message": "• 1: зберегти"
   },
-  "options_whitelistFlag0": {
+  "options_allowlistFlag0": {
     "message": "• 0: видалити"
   },
-  "options_whitelistFormat2Title": {
+  "options_allowlistFormat2Title": {
     "message": "2. Скорочений формат"
   },
-  "options_whitelistFormat2Code": {
+  "options_allowlistFormat2Code": {
     "message": "домен"
   },
-  "options_whitelistFormat2Note": {
+  "options_allowlistFormat2Note": {
     "message": "• І файли cookie, і кеш вважаються такими, що «зберігаються»."
   },
-  "options_whitelistExampleTitle": {
+  "options_allowlistExampleTitle": {
     "message": "Приклади"
   },
-  "options_whitelistExample1": {
+  "options_allowlistExample1": {
     "message": "⇒ Зберегти cookie, зберегти кеш"
   },
-  "options_whitelistExample2": {
+  "options_allowlistExample2": {
     "message": "⇒ Зберегти cookie, видалити кеш"
   },
-  "options_whitelistExample3": {
+  "options_allowlistExample3": {
     "message": "⇒ Якщо не вказано, зберігається все"
   },
   "options_errorListTitle": {
     "message": "Помилки введення:"
   },
-  "options_whitelistPlaceholder": {
+  "options_allowlistPlaceholder": {
     "message": "example.com,1,1\nexample.net"
   },
   "options_loadFailed": {
