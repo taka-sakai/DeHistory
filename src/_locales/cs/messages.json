@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Automatické mazání historie prohlížení"
+  },
+  "extDescription": {
+    "message": "Automaticky maže historii prohlížení a další data pomocí naplánovaného spuštění a bílé listiny."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Otevřít nastavení"
+  },
+  "popup_executeBtn": {
+    "message": "Smazat nyní"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Přidat na bílou listinu"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Odebrat z bílé listiny"
+  },
+  "popup_currentSite": {
+    "message": "Aktuální web: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Aktuální web: $DOMAIN$<br>Je na bílé listině",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Nelze načíst informace o kartě"
+  },
+  "popup_cannotAddSite": {
+    "message": "Tento web nelze přidat"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Nelze zjistit aktuální web"
+  },
+  "popup_errorOccurred": {
+    "message": "Došlo k chybě"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Chyba: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Data se nepodařilo smazat"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Data byla smazána"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Došlo k neočekávané chybě"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Nastavení se nepodařilo načíst"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Uložení se nezdařilo"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ Doména $DOMAIN$ byla odebrána z bílé listiny",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ Doména $DOMAIN$ byla přidána na bílou listinu",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "Možnosti DeHistory"
+  },
+  "options_saveBtn": {
+    "message": "Uložit"
+  },
+  "options_autoRunTiming": {
+    "message": "Okamžik automatického spuštění"
+  },
+  "options_runOnStartup": {
+    "message": "Při spuštění prohlížeče"
+  },
+  "options_runOnClose": {
+    "message": "Při zavření prohlížeče"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Při zavírání prohlížeče se mazání nemusí dokončit."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Pro spolehlivé mazání doporučujeme spuštění při startu prohlížeče."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Položky ke smazání (společné nastavení)"
+  },
+  "options_removeHistory": {
+    "message": "Historie prohlížení"
+  },
+  "options_removeCookies": {
+    "message": "Soubory cookie (cookie a další data webů)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Mezipaměť (obrázky a soubory v mezipaměti)"
+  },
+  "options_removeDownloads": {
+    "message": "Historie stahování"
+  },
+  "options_removeFormData": {
+    "message": "Data automatického vyplňování formulářů"
+  },
+  "options_whitelistLabel": {
+    "message": "Bílá listina"
+  },
+  "options_whitelistDesc": {
+    "message": "Určete weby, které se nemají mazat."
+  },
+  "options_whitelistNote": {
+    "message": "* Samostatně lze nastavit pouze soubory cookie a mezipaměť; ostatní položky se vždy řídí společným nastavením."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Formát"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Použijte jeden z následujících formátů."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Podrobný formát"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "doména, příznak cookie, příznak mezipaměti"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: zachovat"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: smazat"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Zkrácený formát"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "doména"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Soubory cookie i mezipaměť se považují za „zachované“."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Příklady"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Zachovat cookie, zachovat mezipaměť"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Zachovat cookie, smazat mezipaměť"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Při vynechání se zachová vše"
+  },
+  "options_errorListTitle": {
+    "message": "Chyby zadání:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Nastavení se nepodařilo načíst"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Došlo k neočekávané chybě"
+  },
+  "options_initFailed": {
+    "message": "✕ Inicializace se nezdařila"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ Nalezeno chyb: $COUNT$",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Byly nalezeny duplicitní domény"
+  },
+  "options_duplicateLine": {
+    "message": "Řádek $LINE$: doména „$DOMAIN$“ se opakuje (první výskyt na řádku $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Nastavení se nepodařilo uložit"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Nastavení uloženo"
+  },
+
+  "error_domainEmpty": {
+    "message": "Doména je prázdná"
+  },
+  "error_domainTooLong": {
+    "message": "Název domény je příliš dlouhý (max. 253 znaků)"
+  },
+  "error_invalidChars": {
+    "message": "Obsahuje neplatné znaky"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Zástupné znaky (*) nejsou povoleny"
+  },
+  "error_asciiOnly": {
+    "message": "Povoleny jsou pouze znaky ASCII"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Neplatný formát názvu domény"
+  },
+  "error_consecutiveDots": {
+    "message": "Po sobě jdoucí tečky nejsou povoleny"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Doména nesmí začínat ani končit tečkou"
+  },
+  "error_labelTooLong": {
+    "message": "Část názvu domény je příliš dlouhá (max. 63 znaků)"
+  },
+  "error_lineValidation": {
+    "message": "Řádek $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Řádek $LINE$: příznak musí být 0 nebo 1 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Řádek $LINE$: neplatný formát ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Řádek $LINE$: chyba analýzy ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - 自動清除瀏覽紀錄"
+  },
+  "extDescription": {
+    "message": "透過排程執行與白名單功能，自動刪除瀏覽紀錄等資料。"
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "開啟設定"
+  },
+  "popup_executeBtn": {
+    "message": "立即刪除"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "加入白名單"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "從白名單移除"
+  },
+  "popup_currentSite": {
+    "message": "目前網站：$DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "目前網站：$DOMAIN$<br>已登錄於白名單",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "無法取得分頁資訊"
+  },
+  "popup_cannotAddSite": {
+    "message": "無法加入此網站"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "無法取得目前網站"
+  },
+  "popup_errorOccurred": {
+    "message": "發生錯誤"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ 錯誤：$ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ 刪除資料失敗"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ 已成功刪除資料"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ 發生非預期的錯誤"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ 載入設定失敗"
+  },
+  "popup_saveFailed": {
+    "message": "✕ 儲存失敗"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ 已將 $DOMAIN$ 從白名單移除",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ 已將 $DOMAIN$ 加入白名單",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory 選項"
+  },
+  "options_saveBtn": {
+    "message": "儲存"
+  },
+  "options_autoRunTiming": {
+    "message": "自動執行時機"
+  },
+  "options_runOnStartup": {
+    "message": "瀏覽器啟動時"
+  },
+  "options_runOnClose": {
+    "message": "瀏覽器關閉時"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "瀏覽器關閉時，刪除可能無法完成。"
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "為確保刪除可靠，建議於瀏覽器啟動時執行。"
+  },
+  "options_deleteTargetsCommon": {
+    "message": "刪除對象（共用設定）"
+  },
+  "options_removeHistory": {
+    "message": "瀏覽紀錄"
+  },
+  "options_removeCookies": {
+    "message": "Cookie（Cookie 及其他網站資料）"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "快取（快取的圖片和檔案）"
+  },
+  "options_removeDownloads": {
+    "message": "下載紀錄"
+  },
+  "options_removeFormData": {
+    "message": "自動填入的表單資料"
+  },
+  "options_whitelistLabel": {
+    "message": "白名單"
+  },
+  "options_whitelistDesc": {
+    "message": "指定不進行刪除的網站。"
+  },
+  "options_whitelistNote": {
+    "message": "※僅 Cookie 與快取可個別設定，其他項目一律套用共用設定。"
+  },
+  "options_whitelistFormatTitle": {
+    "message": "格式"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "請以下列任一格式指定。"
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. 詳細格式"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "網域, Cookie旗標, 快取旗標"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1：保留"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0：刪除"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. 簡略格式"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "網域"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Cookie 與快取皆視為「保留」。"
+  },
+  "options_whitelistExampleTitle": {
+    "message": "範例"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ 保留 Cookie、保留快取"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ 保留 Cookie、刪除快取"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ 省略時全部保留"
+  },
+  "options_errorListTitle": {
+    "message": "輸入錯誤："
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ 載入設定失敗"
+  },
+  "options_unexpectedError": {
+    "message": "✕ 發生非預期的錯誤"
+  },
+  "options_initFailed": {
+    "message": "✕ 初始化失敗"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ 發現 $COUNT$ 處錯誤",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ 有重複的網域"
+  },
+  "options_duplicateLine": {
+    "message": "第 $LINE$ 行：網域「$DOMAIN$」重複（首次出現於第 $FIRST$ 行）",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ 儲存設定失敗"
+  },
+  "options_saveSuccess": {
+    "message": "✓ 已儲存設定"
+  },
+
+  "error_domainEmpty": {
+    "message": "網域為空白"
+  },
+  "error_domainTooLong": {
+    "message": "網域名稱過長（最多 253 個字元）"
+  },
+  "error_invalidChars": {
+    "message": "包含無效字元"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "不能使用萬用字元 (*)"
+  },
+  "error_asciiOnly": {
+    "message": "僅能使用 ASCII 字元"
+  },
+  "error_invalidDomainFormat": {
+    "message": "網域名稱格式無效"
+  },
+  "error_consecutiveDots": {
+    "message": "不能使用連續的點"
+  },
+  "error_leadingTrailingDot": {
+    "message": "網域開頭或結尾不能是點"
+  },
+  "error_labelTooLong": {
+    "message": "網域標籤過長（最多 63 個字元）"
+  },
+  "error_lineValidation": {
+    "message": "第 $LINE$ 行：$ERROR$（$TEXT$）",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "第 $LINE$ 行：旗標必須為 0 或 1（$TEXT$）",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "第 $LINE$ 行：格式無效（$TEXT$）",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "第 $LINE$ 行：剖析錯誤（$MESSAGE$）",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

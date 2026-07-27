@@ -195,16 +195,20 @@ async function shootPopup(profile, lang, locale, id) {
     await sleep(600);
 }
 
+// _locales のフォルダ名は pt_BR のようにアンダースコア区切りだが、
+// Chrome の --lang は pt-BR 形式でないと認識されず既定言語で起動してしまう。
+const toLang = (locale) => locale.replace(/_/g, '-');
+
 function resolveTargets(argv) {
     const available = fs.readdirSync(path.join(SRC, '_locales'), { withFileTypes: true })
         .filter(d => d.isDirectory()).map(d => d.name);
-    if (argv.length === 0) return available.map(l => ({ locale: l, lang: l }));
+    if (argv.length === 0) return available.map(l => ({ locale: l, lang: toLang(l) }));
     return argv.map(a => {
         const [locale, lang] = a.split(':');
         if (!available.includes(locale)) {
             throw new Error(`src/_locales/${locale} がありません（利用可能: ${available.join(', ')}）`);
         }
-        return { locale, lang: lang || locale };
+        return { locale, lang: lang || toLang(locale) };
     });
 }
 

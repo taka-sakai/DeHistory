@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Browsegeschiedenis automatisch wissen"
+  },
+  "extDescription": {
+    "message": "Verwijdert automatisch browsegeschiedenis en andere gegevens, met geplande uitvoering en een whitelist."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Instellingen openen"
+  },
+  "popup_executeBtn": {
+    "message": "Nu verwijderen"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Toevoegen aan whitelist"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Verwijderen uit whitelist"
+  },
+  "popup_currentSite": {
+    "message": "Huidige site: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Huidige site: $DOMAIN$<br>Staat in de whitelist",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Kan tabbladgegevens niet ophalen"
+  },
+  "popup_cannotAddSite": {
+    "message": "Deze site kan niet worden toegevoegd"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Kan de huidige site niet ophalen"
+  },
+  "popup_errorOccurred": {
+    "message": "Er is een fout opgetreden"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Fout: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Verwijderen van gegevens mislukt"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Gegevens verwijderd"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Er is een onverwachte fout opgetreden"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Laden van instellingen mislukt"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Opslaan mislukt"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ verwijderd uit de whitelist",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ toegevoegd aan de whitelist",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory-opties"
+  },
+  "options_saveBtn": {
+    "message": "Opslaan"
+  },
+  "options_autoRunTiming": {
+    "message": "Moment van automatische uitvoering"
+  },
+  "options_runOnStartup": {
+    "message": "Bij het starten van de browser"
+  },
+  "options_runOnClose": {
+    "message": "Bij het afsluiten van de browser"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Bij het afsluiten van de browser wordt het verwijderen mogelijk niet voltooid."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Voor betrouwbaar verwijderen wordt uitvoeren bij het starten van de browser aanbevolen."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Te verwijderen items (gemeenschappelijke instellingen)"
+  },
+  "options_removeHistory": {
+    "message": "Browsegeschiedenis"
+  },
+  "options_removeCookies": {
+    "message": "Cookies (cookies en andere sitegegevens)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Cache (afbeeldingen en bestanden in cache)"
+  },
+  "options_removeDownloads": {
+    "message": "Downloadgeschiedenis"
+  },
+  "options_removeFormData": {
+    "message": "Gegevens voor automatisch invullen van formulieren"
+  },
+  "options_whitelistLabel": {
+    "message": "Whitelist"
+  },
+  "options_whitelistDesc": {
+    "message": "Geef sites op die van verwijdering worden uitgesloten."
+  },
+  "options_whitelistNote": {
+    "message": "* Alleen cookies en cache kunnen afzonderlijk worden ingesteld; andere items volgen altijd de gemeenschappelijke instellingen."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Indeling"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Gebruik een van de volgende indelingen."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Uitgebreide indeling"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "domein, cookievlag, cachevlag"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: behouden"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: verwijderen"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Korte indeling"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "domein"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Zowel cookies als cache worden behandeld als 'behouden'."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Voorbeelden"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Cookies behouden, cache behouden"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Cookies behouden, cache verwijderen"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Bij weglaten wordt alles behouden"
+  },
+  "options_errorListTitle": {
+    "message": "Invoerfouten:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Laden van instellingen mislukt"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Er is een onverwachte fout opgetreden"
+  },
+  "options_initFailed": {
+    "message": "✕ Initialiseren mislukt"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ Gevonden fouten: $COUNT$",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Dubbele domeinen gevonden"
+  },
+  "options_duplicateLine": {
+    "message": "Regel $LINE$: domein \"$DOMAIN$\" komt dubbel voor (eerste keer op regel $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Opslaan van instellingen mislukt"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Instellingen opgeslagen"
+  },
+
+  "error_domainEmpty": {
+    "message": "Het domein is leeg"
+  },
+  "error_domainTooLong": {
+    "message": "De domeinnaam is te lang (max. 253 tekens)"
+  },
+  "error_invalidChars": {
+    "message": "Bevat ongeldige tekens"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Jokertekens (*) zijn niet toegestaan"
+  },
+  "error_asciiOnly": {
+    "message": "Alleen ASCII-tekens zijn toegestaan"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Ongeldige indeling van domeinnaam"
+  },
+  "error_consecutiveDots": {
+    "message": "Opeenvolgende punten zijn niet toegestaan"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Een domein mag niet met een punt beginnen of eindigen"
+  },
+  "error_labelTooLong": {
+    "message": "Het domeinlabel is te lang (max. 63 tekens)"
+  },
+  "error_lineValidation": {
+    "message": "Regel $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Regel $LINE$: de vlag moet 0 of 1 zijn ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Regel $LINE$: ongeldige indeling ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Regel $LINE$: parseerfout ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

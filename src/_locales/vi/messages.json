@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Tự động xóa lịch sử duyệt web"
+  },
+  "extDescription": {
+    "message": "Tự động xóa lịch sử duyệt web và dữ liệu khác bằng tính năng chạy theo lịch và danh sách trắng."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Mở cài đặt"
+  },
+  "popup_executeBtn": {
+    "message": "Xóa ngay"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Thêm vào danh sách trắng"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Xóa khỏi danh sách trắng"
+  },
+  "popup_currentSite": {
+    "message": "Trang hiện tại: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Trang hiện tại: $DOMAIN$<br>Đã có trong danh sách trắng",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Không thể lấy thông tin tab"
+  },
+  "popup_cannotAddSite": {
+    "message": "Không thể thêm trang web này"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Không thể lấy trang web hiện tại"
+  },
+  "popup_errorOccurred": {
+    "message": "Đã xảy ra lỗi"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Lỗi: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Không xóa được dữ liệu"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Đã xóa dữ liệu thành công"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Đã xảy ra lỗi không mong muốn"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Không tải được cài đặt"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Không lưu được"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ Đã xóa $DOMAIN$ khỏi danh sách trắng",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ Đã thêm $DOMAIN$ vào danh sách trắng",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "Tùy chọn DeHistory"
+  },
+  "options_saveBtn": {
+    "message": "Lưu"
+  },
+  "options_autoRunTiming": {
+    "message": "Thời điểm chạy tự động"
+  },
+  "options_runOnStartup": {
+    "message": "Khi khởi động trình duyệt"
+  },
+  "options_runOnClose": {
+    "message": "Khi đóng trình duyệt"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Khi đóng trình duyệt, việc xóa có thể không hoàn tất."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Để đảm bảo việc xóa hoàn tất, bạn nên chạy khi khởi động trình duyệt."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Mục cần xóa (cài đặt chung)"
+  },
+  "options_removeHistory": {
+    "message": "Lịch sử duyệt web"
+  },
+  "options_removeCookies": {
+    "message": "Cookie (cookie và dữ liệu trang web khác)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Bộ nhớ đệm (hình ảnh và tệp trong bộ nhớ đệm)"
+  },
+  "options_removeDownloads": {
+    "message": "Lịch sử tải xuống"
+  },
+  "options_removeFormData": {
+    "message": "Dữ liệu tự động điền biểu mẫu"
+  },
+  "options_whitelistLabel": {
+    "message": "Danh sách trắng"
+  },
+  "options_whitelistDesc": {
+    "message": "Chỉ định các trang web được loại trừ khỏi việc xóa."
+  },
+  "options_whitelistNote": {
+    "message": "* Chỉ cookie và bộ nhớ đệm có thể được đặt riêng; các mục khác luôn tuân theo cài đặt chung."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Định dạng"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Hãy dùng một trong các định dạng sau."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Định dạng chi tiết"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "tên miền, cờ cookie, cờ bộ nhớ đệm"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: giữ lại"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: xóa"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Định dạng rút gọn"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "tên miền"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Cả cookie và bộ nhớ đệm đều được xem là \"giữ lại\"."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Ví dụ"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Giữ cookie, giữ bộ nhớ đệm"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Giữ cookie, xóa bộ nhớ đệm"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Nếu bỏ qua thì mọi thứ đều được giữ lại"
+  },
+  "options_errorListTitle": {
+    "message": "Lỗi nhập:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Không tải được cài đặt"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Đã xảy ra lỗi không mong muốn"
+  },
+  "options_initFailed": {
+    "message": "✕ Không khởi tạo được"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ Đã tìm thấy $COUNT$ lỗi",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Đã tìm thấy tên miền trùng lặp"
+  },
+  "options_duplicateLine": {
+    "message": "Dòng $LINE$: tên miền \"$DOMAIN$\" bị trùng lặp (xuất hiện đầu tiên ở dòng $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Không lưu được cài đặt"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Đã lưu cài đặt"
+  },
+
+  "error_domainEmpty": {
+    "message": "Tên miền đang trống"
+  },
+  "error_domainTooLong": {
+    "message": "Tên miền quá dài (tối đa 253 ký tự)"
+  },
+  "error_invalidChars": {
+    "message": "Chứa ký tự không hợp lệ"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Không cho phép ký tự đại diện (*)"
+  },
+  "error_asciiOnly": {
+    "message": "Chỉ cho phép ký tự ASCII"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Định dạng tên miền không hợp lệ"
+  },
+  "error_consecutiveDots": {
+    "message": "Không cho phép các dấu chấm liên tiếp"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Tên miền không được bắt đầu hoặc kết thúc bằng dấu chấm"
+  },
+  "error_labelTooLong": {
+    "message": "Nhãn tên miền quá dài (tối đa 63 ký tự)"
+  },
+  "error_lineValidation": {
+    "message": "Dòng $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Dòng $LINE$: cờ phải là 0 hoặc 1 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Dòng $LINE$: định dạng không hợp lệ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Dòng $LINE$: lỗi phân tích cú pháp ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

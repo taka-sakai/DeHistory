@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - 인터넷 사용 기록 자동 삭제"
+  },
+  "extDescription": {
+    "message": "예약 실행과 화이트리스트 기능으로 인터넷 사용 기록 등의 데이터를 자동으로 삭제합니다."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "설정 열기"
+  },
+  "popup_executeBtn": {
+    "message": "지금 삭제"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "화이트리스트에 추가"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "화이트리스트에서 제외"
+  },
+  "popup_currentSite": {
+    "message": "현재 사이트: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "현재 사이트: $DOMAIN$<br>화이트리스트에 등록됨",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "탭 정보를 가져올 수 없습니다"
+  },
+  "popup_cannotAddSite": {
+    "message": "이 사이트는 추가할 수 없습니다"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "현재 사이트를 가져올 수 없습니다"
+  },
+  "popup_errorOccurred": {
+    "message": "오류가 발생했습니다"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ 오류: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ 데이터 삭제에 실패했습니다"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ 데이터를 삭제했습니다"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ 예기치 않은 오류가 발생했습니다"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ 설정을 불러오지 못했습니다"
+  },
+  "popup_saveFailed": {
+    "message": "✕ 저장하지 못했습니다"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$을(를) 화이트리스트에서 제외했습니다",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$을(를) 화이트리스트에 추가했습니다",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory 옵션"
+  },
+  "options_saveBtn": {
+    "message": "저장"
+  },
+  "options_autoRunTiming": {
+    "message": "자동 실행 시점"
+  },
+  "options_runOnStartup": {
+    "message": "브라우저 시작 시"
+  },
+  "options_runOnClose": {
+    "message": "브라우저 종료 시"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "브라우저 종료 시에는 삭제가 완료되지 않을 수 있습니다."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "확실한 삭제를 위해서는 브라우저 시작 시 실행을 권장합니다."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "삭제 대상(공통 설정)"
+  },
+  "options_removeHistory": {
+    "message": "인터넷 사용 기록"
+  },
+  "options_removeCookies": {
+    "message": "쿠키(쿠키 및 기타 사이트 데이터)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "캐시(캐시된 이미지 및 파일)"
+  },
+  "options_removeDownloads": {
+    "message": "다운로드 기록"
+  },
+  "options_removeFormData": {
+    "message": "자동 입력 양식 데이터"
+  },
+  "options_whitelistLabel": {
+    "message": "화이트리스트"
+  },
+  "options_whitelistDesc": {
+    "message": "삭제 대상에서 제외할 사이트를 지정합니다."
+  },
+  "options_whitelistNote": {
+    "message": "※쿠키와 캐시만 개별 설정이 가능하며, 그 외 항목은 항상 공통 설정을 따릅니다."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "형식"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "다음 중 하나의 형식으로 지정하세요."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. 상세 형식"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "도메인, 쿠키 플래그, 캐시 플래그"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: 유지"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: 삭제"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. 간략 형식"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "도메인"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• 쿠키와 캐시 모두 \"유지\"로 처리됩니다."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "작성 예"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ 쿠키 유지, 캐시 유지"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ 쿠키 유지, 캐시 삭제"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ 생략하면 모두 유지"
+  },
+  "options_errorListTitle": {
+    "message": "입력 오류:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ 설정을 불러오지 못했습니다"
+  },
+  "options_unexpectedError": {
+    "message": "✕ 예기치 않은 오류가 발생했습니다"
+  },
+  "options_initFailed": {
+    "message": "✕ 초기화하지 못했습니다"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ $COUNT$건의 오류가 있습니다",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ 중복된 도메인이 있습니다"
+  },
+  "options_duplicateLine": {
+    "message": "$LINE$행: 도메인 \"$DOMAIN$\"이(가) 중복되었습니다(최초 출현: $FIRST$행)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ 설정을 저장하지 못했습니다"
+  },
+  "options_saveSuccess": {
+    "message": "✓ 설정을 저장했습니다"
+  },
+
+  "error_domainEmpty": {
+    "message": "도메인이 비어 있습니다"
+  },
+  "error_domainTooLong": {
+    "message": "도메인 이름이 너무 깁니다(최대 253자)"
+  },
+  "error_invalidChars": {
+    "message": "잘못된 문자가 포함되어 있습니다"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "와일드카드(*)는 사용할 수 없습니다"
+  },
+  "error_asciiOnly": {
+    "message": "ASCII 문자만 사용할 수 있습니다"
+  },
+  "error_invalidDomainFormat": {
+    "message": "도메인 이름 형식이 올바르지 않습니다"
+  },
+  "error_consecutiveDots": {
+    "message": "연속된 점은 사용할 수 없습니다"
+  },
+  "error_leadingTrailingDot": {
+    "message": "도메인의 처음이나 끝에 점을 사용할 수 없습니다"
+  },
+  "error_labelTooLong": {
+    "message": "도메인 레이블이 너무 깁니다(최대 63자)"
+  },
+  "error_lineValidation": {
+    "message": "$LINE$행: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "$LINE$행: 플래그는 0 또는 1이어야 합니다 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "$LINE$행: 형식이 올바르지 않습니다 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "$LINE$행: 파싱 오류 ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

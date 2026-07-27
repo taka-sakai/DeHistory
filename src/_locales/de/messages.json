@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Browserverlauf automatisch löschen"
+  },
+  "extDescription": {
+    "message": "Löscht Browserverlauf und andere Daten automatisch – mit geplanter Ausführung und Whitelist-Funktion."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Einstellungen öffnen"
+  },
+  "popup_executeBtn": {
+    "message": "Jetzt löschen"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Zur Whitelist hinzufügen"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Aus Whitelist entfernen"
+  },
+  "popup_currentSite": {
+    "message": "Aktuelle Website: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Aktuelle Website: $DOMAIN$<br>In der Whitelist eingetragen",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Tab-Informationen können nicht abgerufen werden"
+  },
+  "popup_cannotAddSite": {
+    "message": "Diese Website kann nicht hinzugefügt werden"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Aktuelle Website kann nicht abgerufen werden"
+  },
+  "popup_errorOccurred": {
+    "message": "Ein Fehler ist aufgetreten"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Fehler: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Daten konnten nicht gelöscht werden"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Daten erfolgreich gelöscht"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Ein unerwarteter Fehler ist aufgetreten"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Einstellungen konnten nicht geladen werden"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Speichern fehlgeschlagen"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ aus der Whitelist entfernt",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ zur Whitelist hinzugefügt",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory-Optionen"
+  },
+  "options_saveBtn": {
+    "message": "Speichern"
+  },
+  "options_autoRunTiming": {
+    "message": "Zeitpunkt der automatischen Ausführung"
+  },
+  "options_runOnStartup": {
+    "message": "Beim Start des Browsers"
+  },
+  "options_runOnClose": {
+    "message": "Beim Schließen des Browsers"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Beim Schließen des Browsers wird der Löschvorgang möglicherweise nicht abgeschlossen."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Für zuverlässiges Löschen wird die Ausführung beim Browserstart empfohlen."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Zu löschende Elemente (gemeinsame Einstellungen)"
+  },
+  "options_removeHistory": {
+    "message": "Browserverlauf"
+  },
+  "options_removeCookies": {
+    "message": "Cookies (Cookies und andere Websitedaten)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Cache (im Cache gespeicherte Bilder und Dateien)"
+  },
+  "options_removeDownloads": {
+    "message": "Downloadverlauf"
+  },
+  "options_removeFormData": {
+    "message": "Autofill-Formulardaten"
+  },
+  "options_whitelistLabel": {
+    "message": "Whitelist"
+  },
+  "options_whitelistDesc": {
+    "message": "Legen Sie Websites fest, die vom Löschen ausgenommen werden."
+  },
+  "options_whitelistNote": {
+    "message": "* Nur Cookies und Cache lassen sich einzeln einstellen; alle anderen Elemente folgen stets den gemeinsamen Einstellungen."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Format"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Verwenden Sie eines der folgenden Formate."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Ausführliches Format"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "Domain, Cookie-Flag, Cache-Flag"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: behalten"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: löschen"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Kurzformat"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "Domain"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Cookies und Cache werden beide als „behalten“ behandelt."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Beispiele"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Cookies behalten, Cache behalten"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Cookies behalten, Cache löschen"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Bei Weglassen wird alles behalten"
+  },
+  "options_errorListTitle": {
+    "message": "Eingabefehler:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Einstellungen konnten nicht geladen werden"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Ein unerwarteter Fehler ist aufgetreten"
+  },
+  "options_initFailed": {
+    "message": "✕ Initialisierung fehlgeschlagen"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ $COUNT$ Fehler gefunden",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Doppelte Domains gefunden"
+  },
+  "options_duplicateLine": {
+    "message": "Zeile $LINE$: Domain „$DOMAIN$“ ist doppelt vorhanden (erstes Auftreten in Zeile $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Einstellungen konnten nicht gespeichert werden"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Einstellungen gespeichert"
+  },
+
+  "error_domainEmpty": {
+    "message": "Domain ist leer"
+  },
+  "error_domainTooLong": {
+    "message": "Domainname ist zu lang (max. 253 Zeichen)"
+  },
+  "error_invalidChars": {
+    "message": "Enthält ungültige Zeichen"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Platzhalter (*) sind nicht zulässig"
+  },
+  "error_asciiOnly": {
+    "message": "Nur ASCII-Zeichen sind zulässig"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Ungültiges Format des Domainnamens"
+  },
+  "error_consecutiveDots": {
+    "message": "Aufeinanderfolgende Punkte sind nicht zulässig"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Die Domain darf nicht mit einem Punkt beginnen oder enden"
+  },
+  "error_labelTooLong": {
+    "message": "Domain-Label ist zu lang (max. 63 Zeichen)"
+  },
+  "error_lineValidation": {
+    "message": "Zeile $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Zeile $LINE$: Flag muss 0 oder 1 sein ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Zeile $LINE$: ungültiges Format ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Zeile $LINE$: Parserfehler ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Tarama geçmişini otomatik olarak sil"
+  },
+  "extDescription": {
+    "message": "Zamanlanmış çalıştırma ve beyaz liste özelliğiyle tarama geçmişini ve diğer verileri otomatik olarak siler."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Ayarları aç"
+  },
+  "popup_executeBtn": {
+    "message": "Şimdi sil"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Beyaz listeye ekle"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Beyaz listeden çıkar"
+  },
+  "popup_currentSite": {
+    "message": "Geçerli site: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Geçerli site: $DOMAIN$<br>Beyaz listede kayıtlı",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Sekme bilgileri alınamıyor"
+  },
+  "popup_cannotAddSite": {
+    "message": "Bu site eklenemez"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Geçerli site alınamıyor"
+  },
+  "popup_errorOccurred": {
+    "message": "Bir hata oluştu"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Hata: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Veriler silinemedi"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Veriler başarıyla silindi"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Beklenmeyen bir hata oluştu"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Ayarlar yüklenemedi"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Kaydedilemedi"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ beyaz listeden çıkarıldı",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ beyaz listeye eklendi",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory Seçenekleri"
+  },
+  "options_saveBtn": {
+    "message": "Kaydet"
+  },
+  "options_autoRunTiming": {
+    "message": "Otomatik çalıştırma zamanı"
+  },
+  "options_runOnStartup": {
+    "message": "Tarayıcı başlatıldığında"
+  },
+  "options_runOnClose": {
+    "message": "Tarayıcı kapatıldığında"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Tarayıcı kapatılırken silme işlemi tamamlanmayabilir."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Güvenilir silme için tarayıcı başlangıcında çalıştırılması önerilir."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Silinecek öğeler (ortak ayarlar)"
+  },
+  "options_removeHistory": {
+    "message": "Tarama geçmişi"
+  },
+  "options_removeCookies": {
+    "message": "Çerezler (çerezler ve diğer site verileri)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Önbellek (önbelleğe alınmış resimler ve dosyalar)"
+  },
+  "options_removeDownloads": {
+    "message": "İndirme geçmişi"
+  },
+  "options_removeFormData": {
+    "message": "Otomatik doldurulan form verileri"
+  },
+  "options_whitelistLabel": {
+    "message": "Beyaz liste"
+  },
+  "options_whitelistDesc": {
+    "message": "Silme işleminin dışında tutulacak siteleri belirtin."
+  },
+  "options_whitelistNote": {
+    "message": "* Yalnızca çerezler ve önbellek ayrı ayrı ayarlanabilir; diğer öğeler her zaman ortak ayarları izler."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Biçim"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Aşağıdaki biçimlerden birini kullanın."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Ayrıntılı biçim"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "alan adı, çerez bayrağı, önbellek bayrağı"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: koru"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: sil"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Kısa biçim"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "alan adı"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Hem çerezler hem de önbellek \"korunacak\" olarak kabul edilir."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Örnekler"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Çerezleri koru, önbelleği koru"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Çerezleri koru, önbelleği sil"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Belirtilmezse her şey korunur"
+  },
+  "options_errorListTitle": {
+    "message": "Giriş hataları:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Ayarlar yüklenemedi"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Beklenmeyen bir hata oluştu"
+  },
+  "options_initFailed": {
+    "message": "✕ Başlatılamadı"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ $COUNT$ hata bulundu",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Yinelenen alan adları bulundu"
+  },
+  "options_duplicateLine": {
+    "message": "$LINE$. satır: \"$DOMAIN$\" alan adı yinelenmiş (ilk görüldüğü satır: $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Ayarlar kaydedilemedi"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Ayarlar kaydedildi"
+  },
+
+  "error_domainEmpty": {
+    "message": "Alan adı boş"
+  },
+  "error_domainTooLong": {
+    "message": "Alan adı çok uzun (en fazla 253 karakter)"
+  },
+  "error_invalidChars": {
+    "message": "Geçersiz karakterler içeriyor"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Joker karakterlere (*) izin verilmez"
+  },
+  "error_asciiOnly": {
+    "message": "Yalnızca ASCII karakterlerine izin verilir"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Alan adı biçimi geçersiz"
+  },
+  "error_consecutiveDots": {
+    "message": "Ardışık noktalara izin verilmez"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Alan adı nokta ile başlayamaz veya bitemez"
+  },
+  "error_labelTooLong": {
+    "message": "Alan adı etiketi çok uzun (en fazla 63 karakter)"
+  },
+  "error_lineValidation": {
+    "message": "$LINE$. satır: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "$LINE$. satır: bayrak 0 veya 1 olmalıdır ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "$LINE$. satır: geçersiz biçim ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "$LINE$. satır: ayrıştırma hatası ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

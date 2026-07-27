@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Hapus riwayat penjelajahan secara otomatis"
+  },
+  "extDescription": {
+    "message": "Menghapus riwayat penjelajahan dan data lain secara otomatis dengan penjadwalan dan fitur daftar putih."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Buka setelan"
+  },
+  "popup_executeBtn": {
+    "message": "Hapus sekarang"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Tambahkan ke daftar putih"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Hapus dari daftar putih"
+  },
+  "popup_currentSite": {
+    "message": "Situs saat ini: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Situs saat ini: $DOMAIN$<br>Terdaftar di daftar putih",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Tidak dapat mengambil informasi tab"
+  },
+  "popup_cannotAddSite": {
+    "message": "Situs ini tidak dapat ditambahkan"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Tidak dapat mengambil situs saat ini"
+  },
+  "popup_errorOccurred": {
+    "message": "Terjadi kesalahan"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Kesalahan: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Gagal menghapus data"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Data berhasil dihapus"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Terjadi kesalahan yang tidak terduga"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Gagal memuat setelan"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Gagal menyimpan"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ dihapus dari daftar putih",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ ditambahkan ke daftar putih",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "Opsi DeHistory"
+  },
+  "options_saveBtn": {
+    "message": "Simpan"
+  },
+  "options_autoRunTiming": {
+    "message": "Waktu eksekusi otomatis"
+  },
+  "options_runOnStartup": {
+    "message": "Saat browser dijalankan"
+  },
+  "options_runOnClose": {
+    "message": "Saat browser ditutup"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Penghapusan mungkin tidak selesai saat browser ditutup."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Untuk penghapusan yang andal, disarankan menjalankannya saat browser dimulai."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Item yang dihapus (setelan umum)"
+  },
+  "options_removeHistory": {
+    "message": "Riwayat penjelajahan"
+  },
+  "options_removeCookies": {
+    "message": "Cookie (cookie dan data situs lainnya)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Cache (gambar dan file yang di-cache)"
+  },
+  "options_removeDownloads": {
+    "message": "Riwayat download"
+  },
+  "options_removeFormData": {
+    "message": "Data isi otomatis formulir"
+  },
+  "options_whitelistLabel": {
+    "message": "Daftar putih"
+  },
+  "options_whitelistDesc": {
+    "message": "Tentukan situs yang dikecualikan dari penghapusan."
+  },
+  "options_whitelistNote": {
+    "message": "* Hanya cookie dan cache yang dapat diatur secara terpisah; item lain selalu mengikuti setelan umum."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Format"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Gunakan salah satu format berikut."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Format lengkap"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "domain, flag cookie, flag cache"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: pertahankan"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: hapus"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Format singkat"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "domain"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Cookie dan cache sama-sama dianggap \"dipertahankan\"."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Contoh"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Pertahankan cookie, pertahankan cache"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Pertahankan cookie, hapus cache"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Jika dihilangkan, semuanya dipertahankan"
+  },
+  "options_errorListTitle": {
+    "message": "Kesalahan input:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Gagal memuat setelan"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Terjadi kesalahan yang tidak terduga"
+  },
+  "options_initFailed": {
+    "message": "✕ Gagal melakukan inisialisasi"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ Ditemukan $COUNT$ kesalahan",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Ditemukan domain duplikat"
+  },
+  "options_duplicateLine": {
+    "message": "Baris $LINE$: domain \"$DOMAIN$\" duplikat (kemunculan pertama di baris $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Gagal menyimpan setelan"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Setelan disimpan"
+  },
+
+  "error_domainEmpty": {
+    "message": "Domain kosong"
+  },
+  "error_domainTooLong": {
+    "message": "Nama domain terlalu panjang (maks. 253 karakter)"
+  },
+  "error_invalidChars": {
+    "message": "Berisi karakter yang tidak valid"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Karakter pengganti (*) tidak diizinkan"
+  },
+  "error_asciiOnly": {
+    "message": "Hanya karakter ASCII yang diizinkan"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Format nama domain tidak valid"
+  },
+  "error_consecutiveDots": {
+    "message": "Titik berurutan tidak diizinkan"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Domain tidak boleh diawali atau diakhiri dengan titik"
+  },
+  "error_labelTooLong": {
+    "message": "Label domain terlalu panjang (maks. 63 karakter)"
+  },
+  "error_lineValidation": {
+    "message": "Baris $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Baris $LINE$: flag harus 0 atau 1 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Baris $LINE$: format tidak valid ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Baris $LINE$: kesalahan penguraian ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

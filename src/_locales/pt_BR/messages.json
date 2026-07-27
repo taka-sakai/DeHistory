@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Limpar o histórico de navegação automaticamente"
+  },
+  "extDescription": {
+    "message": "Exclui automaticamente o histórico de navegação e outros dados, com execução programada e lista de permissões."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Abrir configurações"
+  },
+  "popup_executeBtn": {
+    "message": "Excluir agora"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Adicionar à lista de permissões"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Remover da lista de permissões"
+  },
+  "popup_currentSite": {
+    "message": "Site atual: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Site atual: $DOMAIN$<br>Está na lista de permissões",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Não foi possível obter as informações da guia"
+  },
+  "popup_cannotAddSite": {
+    "message": "Não é possível adicionar este site"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Não foi possível obter o site atual"
+  },
+  "popup_errorOccurred": {
+    "message": "Ocorreu um erro"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Erro: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Falha ao excluir os dados"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Dados excluídos com sucesso"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Ocorreu um erro inesperado"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Falha ao carregar as configurações"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Falha ao salvar"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ removido da lista de permissões",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ adicionado à lista de permissões",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "Opções do DeHistory"
+  },
+  "options_saveBtn": {
+    "message": "Salvar"
+  },
+  "options_autoRunTiming": {
+    "message": "Momento da execução automática"
+  },
+  "options_runOnStartup": {
+    "message": "Ao iniciar o navegador"
+  },
+  "options_runOnClose": {
+    "message": "Ao fechar o navegador"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "A exclusão pode não ser concluída ao fechar o navegador."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Para uma exclusão confiável, recomenda-se executar ao iniciar o navegador."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Itens a excluir (configurações comuns)"
+  },
+  "options_removeHistory": {
+    "message": "Histórico de navegação"
+  },
+  "options_removeCookies": {
+    "message": "Cookies (cookies e outros dados do site)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Cache (imagens e arquivos armazenados em cache)"
+  },
+  "options_removeDownloads": {
+    "message": "Histórico de downloads"
+  },
+  "options_removeFormData": {
+    "message": "Dados de preenchimento automático de formulários"
+  },
+  "options_whitelistLabel": {
+    "message": "Lista de permissões"
+  },
+  "options_whitelistDesc": {
+    "message": "Especifique os sites cujos dados não devem ser excluídos."
+  },
+  "options_whitelistNote": {
+    "message": "* Somente cookies e cache podem ser configurados individualmente; os demais itens seguem sempre as configurações comuns."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Formato"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Use um dos formatos a seguir."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Formato detalhado"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "domínio, flag de cookies, flag de cache"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: manter"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: excluir"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Formato abreviado"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "domínio"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• Tanto os cookies quanto o cache são tratados como \"manter\"."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Exemplos"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Manter cookies, manter cache"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Manter cookies, excluir cache"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Se omitido, tudo é mantido"
+  },
+  "options_errorListTitle": {
+    "message": "Erros de entrada:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Falha ao carregar as configurações"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Ocorreu um erro inesperado"
+  },
+  "options_initFailed": {
+    "message": "✕ Falha ao inicializar"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ Erros encontrados: $COUNT$",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Domínios duplicados encontrados"
+  },
+  "options_duplicateLine": {
+    "message": "Linha $LINE$: o domínio \"$DOMAIN$\" está duplicado (primeira ocorrência na linha $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Falha ao salvar as configurações"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Configurações salvas"
+  },
+
+  "error_domainEmpty": {
+    "message": "O domínio está vazio"
+  },
+  "error_domainTooLong": {
+    "message": "O nome de domínio é muito longo (máx. 253 caracteres)"
+  },
+  "error_invalidChars": {
+    "message": "Contém caracteres inválidos"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Curingas (*) não são permitidos"
+  },
+  "error_asciiOnly": {
+    "message": "Somente caracteres ASCII são permitidos"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Formato de nome de domínio inválido"
+  },
+  "error_consecutiveDots": {
+    "message": "Pontos consecutivos não são permitidos"
+  },
+  "error_leadingTrailingDot": {
+    "message": "O domínio não pode começar nem terminar com ponto"
+  },
+  "error_labelTooLong": {
+    "message": "O rótulo de domínio é muito longo (máx. 63 caracteres)"
+  },
+  "error_lineValidation": {
+    "message": "Linha $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Linha $LINE$: a flag deve ser 0 ou 1 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Linha $LINE$: formato inválido ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Linha $LINE$: erro de análise ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

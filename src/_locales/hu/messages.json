@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - Böngészési előzmények automatikus törlése"
+  },
+  "extDescription": {
+    "message": "Automatikusan törli a böngészési előzményeket és más adatokat ütemezett futtatással és fehérlistával."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Beállítások megnyitása"
+  },
+  "popup_executeBtn": {
+    "message": "Törlés most"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Hozzáadás a fehérlistához"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Eltávolítás a fehérlistáról"
+  },
+  "popup_currentSite": {
+    "message": "Jelenlegi webhely: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Jelenlegi webhely: $DOMAIN$<br>Szerepel a fehérlistán",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Nem sikerült lekérni a lap adatait"
+  },
+  "popup_cannotAddSite": {
+    "message": "Ez a webhely nem adható hozzá"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Nem sikerült lekérni a jelenlegi webhelyet"
+  },
+  "popup_errorOccurred": {
+    "message": "Hiba történt"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Hiba: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Az adatok törlése nem sikerült"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Az adatok törlése megtörtént"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Váratlan hiba történt"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ A beállítások betöltése nem sikerült"
+  },
+  "popup_saveFailed": {
+    "message": "✕ A mentés nem sikerült"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ A(z) $DOMAIN$ eltávolítva a fehérlistáról",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ A(z) $DOMAIN$ hozzáadva a fehérlistához",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "DeHistory beállításai"
+  },
+  "options_saveBtn": {
+    "message": "Mentés"
+  },
+  "options_autoRunTiming": {
+    "message": "Automatikus futtatás időpontja"
+  },
+  "options_runOnStartup": {
+    "message": "A böngésző indításakor"
+  },
+  "options_runOnClose": {
+    "message": "A böngésző bezárásakor"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "A böngésző bezárásakor a törlés esetleg nem fejeződik be."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "A megbízható törléshez a böngésző indításakor való futtatás ajánlott."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Törlendő elemek (közös beállítások)"
+  },
+  "options_removeHistory": {
+    "message": "Böngészési előzmények"
+  },
+  "options_removeCookies": {
+    "message": "Sütik (sütik és egyéb webhelyadatok)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Gyorsítótár (gyorsítótárazott képek és fájlok)"
+  },
+  "options_removeDownloads": {
+    "message": "Letöltési előzmények"
+  },
+  "options_removeFormData": {
+    "message": "Űrlapok automatikus kitöltési adatai"
+  },
+  "options_whitelistLabel": {
+    "message": "Fehérlista"
+  },
+  "options_whitelistDesc": {
+    "message": "Adja meg a törlésből kihagyandó webhelyeket."
+  },
+  "options_whitelistNote": {
+    "message": "* Csak a sütik és a gyorsítótár állítható be egyenként; a többi elem mindig a közös beállításokat követi."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Formátum"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Használja az alábbi formátumok egyikét."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Részletes formátum"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "domain, sütijelző, gyorsítótár-jelző"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: megtartás"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: törlés"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Rövid formátum"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "domain"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• A sütik és a gyorsítótár egyaránt „megtartandó” értéket kap."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Példák"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Sütik megtartása, gyorsítótár megtartása"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Sütik megtartása, gyorsítótár törlése"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Elhagyás esetén minden megmarad"
+  },
+  "options_errorListTitle": {
+    "message": "Beviteli hibák:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ A beállítások betöltése nem sikerült"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Váratlan hiba történt"
+  },
+  "options_initFailed": {
+    "message": "✕ Az inicializálás nem sikerült"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ $COUNT$ hiba található",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Ismétlődő domainek találhatók"
+  },
+  "options_duplicateLine": {
+    "message": "$LINE$. sor: a(z) „$DOMAIN$” domain ismétlődik (első előfordulás: $FIRST$. sor)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ A beállítások mentése nem sikerült"
+  },
+  "options_saveSuccess": {
+    "message": "✓ A beállítások mentve"
+  },
+
+  "error_domainEmpty": {
+    "message": "A domain üres"
+  },
+  "error_domainTooLong": {
+    "message": "A domainnév túl hosszú (legfeljebb 253 karakter)"
+  },
+  "error_invalidChars": {
+    "message": "Érvénytelen karaktereket tartalmaz"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "A helyettesítő karakterek (*) nem engedélyezettek"
+  },
+  "error_asciiOnly": {
+    "message": "Csak ASCII karakterek engedélyezettek"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Érvénytelen domainnév-formátum"
+  },
+  "error_consecutiveDots": {
+    "message": "Az egymást követő pontok nem engedélyezettek"
+  },
+  "error_leadingTrailingDot": {
+    "message": "A domain nem kezdődhet és nem végződhet ponttal"
+  },
+  "error_labelTooLong": {
+    "message": "A domaincímke túl hosszú (legfeljebb 63 karakter)"
+  },
+  "error_lineValidation": {
+    "message": "$LINE$. sor: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "$LINE$. sor: a jelző csak 0 vagy 1 lehet ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "$LINE$. sor: érvénytelen formátum ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "$LINE$. sor: elemzési hiba ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}

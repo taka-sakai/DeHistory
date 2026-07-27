@@ -25,8 +25,9 @@ node take-screenshots.js ja         # 日本語のみ
 node take-screenshots.js fr:fr-FR   # _locales/fr を Chrome の fr-FR で撮る
 ```
 
-言語フォルダ名がそのまま Chrome の `--lang` になる。異なる値を渡したいときだけ
-`フォルダ名:Chromeの言語` の形式で指定する。
+言語フォルダ名がそのまま Chrome の `--lang` になる（`pt_BR` のような
+アンダースコアは `pt-BR` に変換される。Chrome はこの形式でないと認識しない）。
+異なる値を渡したいときだけ `フォルダ名:Chromeの言語` の形式で指定する。
 
 **撮影中はChromeウィンドウが画面を占有する。** OSの画面キャプチャを使うため、
 他の作業と並行してはいけない。

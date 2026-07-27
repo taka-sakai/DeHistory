@@ -1,0 +1,261 @@
+{
+  "extName": {
+    "message": "DeHistory - автоматичне очищення історії перегляду"
+  },
+  "extDescription": {
+    "message": "Автоматично видаляє історію перегляду та інші дані за допомогою запуску за розкладом і білого списку."
+  },
+
+  "popup_settingsBtnTitle": {
+    "message": "Відкрити налаштування"
+  },
+  "popup_executeBtn": {
+    "message": "Видалити зараз"
+  },
+  "popup_addToWhitelistBtn": {
+    "message": "Додати до білого списку"
+  },
+  "popup_removeFromWhitelistBtn": {
+    "message": "Вилучити з білого списку"
+  },
+  "popup_currentSite": {
+    "message": "Поточний сайт: $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_currentSiteRegistered": {
+    "message": "Поточний сайт: $DOMAIN$<br>Є в білому списку",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_cannotGetTabInfo": {
+    "message": "Не вдалося отримати відомості про вкладку"
+  },
+  "popup_cannotAddSite": {
+    "message": "Цей сайт не можна додати"
+  },
+  "popup_cannotGetCurrentSite": {
+    "message": "Не вдалося визначити поточний сайт"
+  },
+  "popup_errorOccurred": {
+    "message": "Сталася помилка"
+  },
+  "popup_sendMessageError": {
+    "message": "✕ Помилка: $ERROR$",
+    "placeholders": {
+      "error": { "content": "$1" }
+    }
+  },
+  "popup_deleteFailed": {
+    "message": "✕ Не вдалося видалити дані"
+  },
+  "popup_deleteSuccess": {
+    "message": "✓ Дані успішно видалено"
+  },
+  "popup_unexpectedError": {
+    "message": "✕ Сталася неочікувана помилка"
+  },
+  "popup_whitelistLoadFailed": {
+    "message": "✕ Не вдалося завантажити налаштування"
+  },
+  "popup_saveFailed": {
+    "message": "✕ Не вдалося зберегти"
+  },
+  "popup_removedFromWhitelist": {
+    "message": "✓ $DOMAIN$ вилучено з білого списку",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popup_addedToWhitelist": {
+    "message": "✓ $DOMAIN$ додано до білого списку",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+
+  "options_pageTitle": {
+    "message": "Налаштування DeHistory"
+  },
+  "options_saveBtn": {
+    "message": "Зберегти"
+  },
+  "options_autoRunTiming": {
+    "message": "Момент автоматичного запуску"
+  },
+  "options_runOnStartup": {
+    "message": "Під час запуску браузера"
+  },
+  "options_runOnClose": {
+    "message": "Під час закриття браузера"
+  },
+  "options_runOnCloseTooltipLine1": {
+    "message": "Під час закриття браузера видалення може не завершитися."
+  },
+  "options_runOnCloseTooltipLine2": {
+    "message": "Для надійного видалення рекомендуємо запуск під час старту браузера."
+  },
+  "options_deleteTargetsCommon": {
+    "message": "Що видаляти (спільні налаштування)"
+  },
+  "options_removeHistory": {
+    "message": "Історія перегляду"
+  },
+  "options_removeCookies": {
+    "message": "Файли cookie (cookie та інші дані сайтів)"
+  },
+  "options_removeCacheAndStorage": {
+    "message": "Кеш (зображення та файли в кеші)"
+  },
+  "options_removeDownloads": {
+    "message": "Історія завантажень"
+  },
+  "options_removeFormData": {
+    "message": "Дані автозаповнення форм"
+  },
+  "options_whitelistLabel": {
+    "message": "Білий список"
+  },
+  "options_whitelistDesc": {
+    "message": "Укажіть сайти, які не потрібно очищати."
+  },
+  "options_whitelistNote": {
+    "message": "* Окремо можна налаштувати лише файли cookie та кеш; інші елементи завжди підпорядковані спільним налаштуванням."
+  },
+  "options_whitelistFormatTitle": {
+    "message": "Формат"
+  },
+  "options_whitelistFormatIntro": {
+    "message": "Використовуйте один із наведених форматів."
+  },
+  "options_whitelistFormat1Title": {
+    "message": "1. Докладний формат"
+  },
+  "options_whitelistFormat1Code": {
+    "message": "домен, прапорець cookie, прапорець кешу"
+  },
+  "options_whitelistFlag1": {
+    "message": "• 1: зберегти"
+  },
+  "options_whitelistFlag0": {
+    "message": "• 0: видалити"
+  },
+  "options_whitelistFormat2Title": {
+    "message": "2. Скорочений формат"
+  },
+  "options_whitelistFormat2Code": {
+    "message": "домен"
+  },
+  "options_whitelistFormat2Note": {
+    "message": "• І файли cookie, і кеш вважаються такими, що «зберігаються»."
+  },
+  "options_whitelistExampleTitle": {
+    "message": "Приклади"
+  },
+  "options_whitelistExample1": {
+    "message": "⇒ Зберегти cookie, зберегти кеш"
+  },
+  "options_whitelistExample2": {
+    "message": "⇒ Зберегти cookie, видалити кеш"
+  },
+  "options_whitelistExample3": {
+    "message": "⇒ Якщо не вказано, зберігається все"
+  },
+  "options_errorListTitle": {
+    "message": "Помилки введення:"
+  },
+  "options_whitelistPlaceholder": {
+    "message": "example.com,1,1\nexample.net"
+  },
+  "options_loadFailed": {
+    "message": "✕ Не вдалося завантажити налаштування"
+  },
+  "options_unexpectedError": {
+    "message": "✕ Сталася неочікувана помилка"
+  },
+  "options_initFailed": {
+    "message": "✕ Не вдалося виконати ініціалізацію"
+  },
+  "options_validationErrorCount": {
+    "message": "⚠ Знайдено помилок: $COUNT$",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "options_domainDuplicate": {
+    "message": "⚠ Виявлено повторювані домени"
+  },
+  "options_duplicateLine": {
+    "message": "Рядок $LINE$: домен «$DOMAIN$» повторюється (перше входження в рядку $FIRST$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "domain": { "content": "$2" },
+      "first": { "content": "$3" }
+    }
+  },
+  "options_saveFailed": {
+    "message": "✕ Не вдалося зберегти налаштування"
+  },
+  "options_saveSuccess": {
+    "message": "✓ Налаштування збережено"
+  },
+
+  "error_domainEmpty": {
+    "message": "Домен не вказано"
+  },
+  "error_domainTooLong": {
+    "message": "Назва домену занадто довга (не більше 253 символів)"
+  },
+  "error_invalidChars": {
+    "message": "Містить неприпустимі символи"
+  },
+  "error_wildcardNotAllowed": {
+    "message": "Символи підстановки (*) не дозволені"
+  },
+  "error_asciiOnly": {
+    "message": "Дозволені лише символи ASCII"
+  },
+  "error_invalidDomainFormat": {
+    "message": "Неправильний формат назви домену"
+  },
+  "error_consecutiveDots": {
+    "message": "Не можна використовувати крапки поспіль"
+  },
+  "error_leadingTrailingDot": {
+    "message": "Домен не може починатися або закінчуватися крапкою"
+  },
+  "error_labelTooLong": {
+    "message": "Мітка домену занадто довга (не більше 63 символів)"
+  },
+  "error_lineValidation": {
+    "message": "Рядок $LINE$: $ERROR$ ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "error": { "content": "$2" },
+      "text": { "content": "$3" }
+    }
+  },
+  "error_lineFlagFormat": {
+    "message": "Рядок $LINE$: прапорець має бути 0 або 1 ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineInvalidFormat": {
+    "message": "Рядок $LINE$: неправильний формат ($TEXT$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "text": { "content": "$2" }
+    }
+  },
+  "error_lineParseError": {
+    "message": "Рядок $LINE$: помилка розбору ($MESSAGE$)",
+    "placeholders": {
+      "line": { "content": "$1" },
+      "message": { "content": "$2" }
+    }
+  }
+}
